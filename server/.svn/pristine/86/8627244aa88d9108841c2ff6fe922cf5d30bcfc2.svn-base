@@ -1,0 +1,16 @@
+var sic = require("../../../controllor/ServerInfoControllor.js");
+var sm = require("../sm/SMGate.js");
+
+module.exports = {
+    //接收到服务器发来的信息
+    GetServerInfoReturn : function(){
+        var jObj = {
+            "data" : 123
+        };
+
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("RMFromGate","SendServerInfoReturn",jObj,true);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    }
+}

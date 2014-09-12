@@ -1,0 +1,11 @@
+{
+    "servers" : [1,2],
+    "dbname" : "GameDB1",
+    "dbhost" : "192.168.51.157",
+    "dbpwd" : "Z2h#43",
+    "dbuser" : "zmjh2er",
+    "pidStart" : 1000000000,
+    "redisPort" : 6379,
+    "redisHost" : "localhost",
+    "注释" : "合服 用，servers:本服所管理的服务器id组成的数组,dbname:数据库名，pidStart:pid开始值"
+}

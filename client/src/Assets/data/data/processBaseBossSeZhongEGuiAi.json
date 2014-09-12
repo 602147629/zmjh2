@@ -1,0 +1,34 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.4
+		},
+
+		"transfer" :{
+			"ai" : "baseBossSeZhongEGuiOneAi",
+			"ReleaseSkill" : 32
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseBossSeZhongEGuiTwoAi",
+			"NoneCallback" : 1
+		}
+	}
+}

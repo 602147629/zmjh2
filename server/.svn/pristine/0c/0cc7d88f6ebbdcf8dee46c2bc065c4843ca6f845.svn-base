@@ -1,0 +1,21 @@
+
+module.exports = {
+    MatchEscortReturn : function(result){
+        var jObj = {
+            "result" : result
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyEscortReceiveControl","MatchEscortReturn",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    CancelMatchEscortReturn : function(result){
+        var jObj = {
+            "result" : result
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyEscortReceiveControl","CancelMatchEscortReturn",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    }
+}

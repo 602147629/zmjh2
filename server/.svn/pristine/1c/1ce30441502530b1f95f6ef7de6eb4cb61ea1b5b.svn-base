@@ -1,0 +1,94 @@
+
+var smPublicNotice = require('../message/remote/sm/SMPublicNotice.js');
+var rcc = require("../../../controllor/RpcConnectorControllor.js");
+
+var PublicNoticeControllor = {};
+
+PublicNoticeControllor.IsReadyToKill = false;
+
+var allClients = [];
+
+var contentArr = [];
+
+PublicNoticeControllor.timeInterval = -1;
+
+
+//有玩家加入
+PublicNoticeControllor.AddClient = function(data){
+    if(PublicNoticeControllor.IsReadyToKill){
+        //准备关闭了，不让加入
+        require("Log").trace("玩家:"+data.gameKey+"发来公告，服务器准备关闭！无法广播");
+        if(cb){
+            cb('SERVER_READY_CLOSE');
+        }
+        return;
+    }
+    if(!allClients[data.gameKey]){
+        allClients[data.gameKey] = data;
+        require("Log").info("玩家:"+data.gameKey+" 加入公告广播队列!当前在线人数:"+Object.keys(allClients).length);
+    }else{
+        require("Log").info("玩家:"+data.gameKey+" 已经加入广播队列!");
+    }
+
+
+}
+
+
+//有玩家离开
+PublicNoticeControllor.RemoveClient = function(gameKey){
+
+    if(allClients[gameKey]){
+        //记录为离开状态
+        delete allClients[gameKey];
+        require("Log").info("玩家:"+gameKey+" 离开广播队列!当前广播队列人数:"+Object.keys(allClients).length);
+    }else{
+        require("Log").error("该玩家不在广播队伍当中！gameKey:"+gameKey);
+    }
+
+}
+
+//根据uid获取玩家是否正在匹配
+PublicNoticeControllor.GetUser = function(gameKey){
+    if(allClients[gameKey]){
+        return allClients[gameKey];
+    }
+}
+
+
+
+PublicNoticeControllor.addMsg = function(obj,cb){
+    if(PublicNoticeControllor.IsReadyToKill){
+        //准备关闭了，不让加入
+        require("Log").trace("服务器准备关闭！无法加入");
+        if(cb){
+            cb('SERVER_READY_CLOSE');
+        }
+        return;
+    }
+    //放入数组
+    require("Log").trace("公告数据"+obj.publicNotice+"放入广播数组");
+    contentArr.push(obj);
+    if(PublicNoticeControllor.timeInterval == -1){
+        PublicNoticeControllor.timeInterval = setInterval(PublicNoticeControllor.sendMsg,2000);
+    }
+}
+
+PublicNoticeControllor.sendMsg = function(){
+    if(contentArr.length>0){
+        require("Log").trace("广播公告"+contentArr[0].publicNotice+"玩家数量"+Object.keys(allClients).length);
+        PublicNoticeControllor.brocastMsg(contentArr[0]);
+        contentArr.shift();
+    }
+}
+
+PublicNoticeControllor.brocastMsg = function(data){
+    var clientKeys = Object.keys(allClients);
+    clientKeys.forEach(function(key){
+        require("Log").trace("广播数据包给玩家！"+data.publicNotice+"玩家数量"+allClients.length+" 序号："+key);
+        rcc.SendByServerId(allClients[key].gameServerId,"RMFromPublicNoticeManager","PublicNoticeReturn",data);
+    });
+
+}
+
+
+module.exports = PublicNoticeControllor;

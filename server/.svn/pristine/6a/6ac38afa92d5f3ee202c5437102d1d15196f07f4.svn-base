@@ -1,0 +1,247 @@
+//自动匹配
+
+var sm = require("../message/remote/sm/SMAutoPipeiEscort.js");
+var rcc = require("../../../controllor/RpcConnectorControllor.js");
+
+
+var waitingArr = [];//正在排队等待护镖的玩家数组
+
+var waitingRobArr = [];//正在排队等待劫镖的玩家数组
+
+var pipeiIndex = -1;//匹配间隔索引
+
+
+var startPipei = function(){
+    clearInterval(pipeiIndex);
+    pipeiIndex = setInterval(checkEscort,3000);
+}
+
+
+var pipeiOk = function(obj1,obj2){
+    if(obj1 && obj2){
+        //进入匹配阶段
+
+        //成功
+        require("Log").info("玩家1:"+obj1.gameKey+",玩家2:"+obj2.gameKey+",申请护镖劫镖成功！通知玩家进入副本！");
+        require("Log").trace("玩家1 data："+JSON.stringify(obj1));
+        require("Log").trace("玩家2 data："+JSON.stringify(obj2));
+
+        rcc.SendByServerId(obj1.gameServerId,"RMFromEscortManager","AutoPipeiEscortReturn",sm.AutoPipeiEscortReturn(1,obj1,obj2));
+        rcc.SendByServerId(obj2.gameServerId,"RMFromEscortManager","AutoPipeiEscortReturn",sm.AutoPipeiEscortReturn(1,obj2,obj1));
+
+
+        //自动离开匹配管理器
+        if(MatchEscortControllor.GetPipeiUser(obj1.gameKey,obj1.escortType)){
+            MatchEscortControllor.RemoveClient(obj1.gameKey,obj1.escortType);
+        }
+        if(MatchEscortControllor.GetPipeiUser(obj1.gameKey,obj1.escortType)){
+            MatchEscortControllor.RemoveClient(obj2.gameKey,obj2.escortType);
+        }
+    }
+}
+
+//判定是否匹配
+var checkResult = function(obj1,obj2){
+    //匹配次数（取双方较大的值）
+    var pipeiCount = Math.max(obj1.pipeiCount,obj2.pipeiCount);
+
+    //装备数量判定
+    var equipCheck = false;
+    if(obj1.pipeiData.equipmentCount > 6 && obj2.pipeiData.equipmentCount > 6){
+        equipCheck = true;
+    }
+    if(obj1.pipeiData.equipmentCount <= 6 && obj2.pipeiData.equipmentCount <= 6){
+        equipCheck = true;
+    }
+    if(!equipCheck){
+        require("Log").trace("第 "+pipeiCount+" 次匹配,装备数量判定未通过！obj1:"+obj1.gameKey+",pipeiData:"+JSON.stringify(obj1.pipeiData)+",obj2:"+obj2.gameKey+",pipeiData:"+JSON.stringify(obj2.pipeiData));
+        return false;
+    }
+
+    //判定主角等级
+    var level = false;
+    var levelDiff = Math.abs(obj1.pipeiData.playerLv - obj2.pipeiData.playerLv);
+    if(levelDiff <=5 ){
+        //相差五级
+        level = true;
+    }
+    if(!level){
+        require("Log").trace("第 "+pipeiCount+" 次匹配,玩家等级判定未通过！obj1:"+obj1.gameKey+",pipeiData:"+JSON.stringify(obj1.pipeiData)+",obj2:"+obj2.gameKey+",pipeiData:"+JSON.stringify(obj2.pipeiData));
+        return false;
+    }
+
+    require("Log").trace("第 "+pipeiCount+" 次匹配,玩家 obj1:"+obj1.gameKey+",obj2:"+obj2.gameKey+",匹配成功");
+    return true;
+
+
+}
+
+
+var checkEscort = function(){
+    var EscortKeys = Object.keys(waitingArr);
+    var RobKeys = Object.keys(waitingRobArr);
+    require("Log").trace("----checkEscort----");
+    if(EscortKeys.length > 0 && RobKeys.length>0){
+
+        //进行匹配
+        var arrTemp = [];
+
+        EscortKeys.forEach(function(key){
+            arrTemp.push(waitingArr[key]);
+        });
+
+        RobKeys.forEach(function(key){
+            arrTemp.push(waitingRobArr[key]);
+        });
+
+        for(var i=0;i<arrTemp.length-1;i++){
+            var obj1 = arrTemp[i];
+            for(var j=i+1;j<arrTemp.length;j++){
+                var obj2 = arrTemp[j];
+                if(obj2.escortType == obj1.escortType){
+                    continue;
+                }
+                if(checkResult(obj1,obj2)){
+                    pipeiOk(obj1,obj2);
+                }else{
+                    obj1.pipeiCount ++;
+                    obj2.pipeiCount ++;
+                }
+            }
+        }
+    }
+}
+
+var MatchEscortControllor = {};
+
+MatchEscortControllor.IsReadyToKill = false;
+
+//有玩家加入
+MatchEscortControllor.AddClient = function(obj,cb){
+    if(MatchEscortControllor.IsReadyToKill){
+        //准备关闭了，不让加入
+        require("Log").info("玩家:"+obj.gameKey+" 加入申请护镖自动匹配!服务器准备关闭！无法加入");
+        if(cb){
+            cb('SERVER_READY_CLOSE');
+        }
+        return;
+    }
+
+    //escortType 0：劫镖  1：护镖
+    if(obj.escortType == 1){
+
+        if(!waitingArr[obj.gameKey]){
+            waitingArr[obj.gameKey] = obj;
+
+            require("Log").trace("玩家data："+JSON.stringify(obj));
+
+            require("Log").info("玩家:"+obj.gameKey+" 加入护镖队列!当前护镖人数:"+Object.keys(waitingArr).length +"当前申请劫镖人数"+Object.keys(waitingRobArr).length);
+
+            //判定是否开始匹配护镖
+            if(pipeiIndex == -1){
+                startPipei();
+            }
+            if(cb){
+                cb(null);
+            }
+        }else{
+            if(cb){
+                cb('ALREADY_IN_ESCORT');
+            }
+        }
+    }else{
+
+        if(!waitingRobArr[obj.gameKey]){
+            waitingRobArr[obj.gameKey] = obj;
+
+            require("Log").trace("玩家data："+JSON.stringify(obj));
+
+            require("Log").info("玩家:"+obj.gameKey+" 加入申请劫镖自动匹配!当前护镖人数:"+Object.keys(waitingArr).length +"当前申请劫镖人数"+Object.keys(waitingRobArr).length);
+
+            //判定是否开始匹配护镖
+            if(pipeiIndex == -1){
+                startPipei();
+            }
+            if(cb){
+                cb(null);
+            }
+        }else{
+            if(cb){
+                cb('ALREADY_IN_ROB');
+            }
+        }
+
+    }
+
+}
+
+
+//更新护镖玩家数据
+MatchEscortControllor.UpdateEscortData = function(obj,cb){
+    if(MatchEscortControllor.IsReadyToKill){
+        //准备关闭了，不让加入
+        require("Log").info("玩家:"+obj.gameKey+" 加入申请护镖自动匹配!服务器准备关闭！无法加入");
+        if(cb){
+            cb('SERVER_READY_CLOSE');
+        }
+        return;
+    }
+    if(waitingArr[obj.gameKey]){
+        waitingArr[obj.gameKey].escortData = obj.escortData;
+        require("Log").info("玩家:"+obj.gameKey+"护镖数据更新："+JSON.stringify(waitingArr[obj.gameKey].escortData));
+
+    }
+}
+
+//有玩家离开自动匹配
+MatchEscortControllor.RemoveClient = function(gameKey,escortType,cb){
+    var obj
+    if(escortType==1){
+        obj = waitingArr[gameKey];
+
+        if(obj){
+            //记录为离开状态
+            delete waitingArr[gameKey];
+            require("Log").info("玩家:"+obj.gameKey+" 离开自动匹配!当前匹配中人数:"+Object.keys(waitingArr).length);
+
+            if(cb){
+                cb(null);
+            }
+        }else{
+            if(cb){
+                cb('NOT_IN_PIPEI');
+            }
+            require("Log").error("该玩家不在自动匹配队伍当中！gameKey:"+gameKey);
+        }
+    }else{
+        obj = waitingRobArr[gameKey];
+
+        if(obj){
+            //记录为离开状态
+            delete waitingRobArr[gameKey];
+            require("Log").info("玩家:"+obj.gameKey+" 离开自动匹配!当前匹配中人数:"+Object.keys(waitingRobArr).length);
+
+            if(cb){
+                cb(null);
+            }
+        }else{
+            if(cb){
+                cb('NOT_IN_PIPEI');
+            }
+            require("Log").error("该玩家不在自动匹配队伍当中！gameKey:"+gameKey);
+        }
+    }
+
+}
+//根据uid获取玩家是否正在匹配
+MatchEscortControllor.GetPipeiUser = function(gameKey,escortType){
+    if(escortType==1){
+        return waitingArr[gameKey];
+    }else{
+        return waitingRobArr[gameKey];
+    }
+
+}
+
+
+module.exports = MatchEscortControllor;

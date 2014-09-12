@@ -1,0 +1,67 @@
+
+module.exports = {
+	//返回玩家操作
+	SendOperation : function(command){
+		var pathBuffer = require('BufferTools').getPathBufferByDict("MyRoomReceiveControl","ReceiveOperation",command);
+
+		//封装包头
+		return require('BufferTools').addPackageHead(pathBuffer);
+	},
+	//游戏开始(附带结果和房间内玩家的所有信息)
+	StartGame : function(result,playerDatas){
+        var info = {
+            "result" : result,
+            "random" : Math.ceil(Math.random()*100000),
+            "datas" : playerDatas
+        };
+
+		var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","StartGame",info);
+
+		//封装包头
+		return require('BufferTools').addPackageHead(pathBuffer);
+	},
+	//玩家离开副本
+	LeftFb : function(result){
+		var info = {
+			"result" : (result?1:0)
+		};
+
+		var buf = require('BufferTools').getJsonPathBufferByDict("MyGameReceiveControl","LeftFb",info);
+
+		//封装包头
+		return require('BufferTools').addPackageHead(buf);
+	},
+    //副本超时
+    FbTimeout : function(){
+        var info = {
+
+        };
+
+        var buf = require('BufferTools').getJsonPathBufferByDict("MyGameReceiveControl","FbTimeout",info);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(buf);
+    },
+    //加载完毕后开始游戏
+    StartGameAfterLoading : function(){
+        var info = {
+
+        };
+
+        var buf = require('BufferTools').getJsonPathBufferByDict("MyGameReceiveControl","StartGameAfterLoading",info);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(buf);
+    },
+    //加载超时
+    ByondLoading : function(){
+        var info = {
+
+        };
+
+        var buf = require('BufferTools').getJsonPathBufferByDict("MyGameReceiveControl","ByondLoading",info);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(buf);
+    }
+}

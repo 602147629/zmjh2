@@ -1,0 +1,49 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.5
+		},
+
+		"transfer" :{
+			"ai" : "baseBossAi",
+			"NoneCallback" : 1
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.2
+		},
+
+		"transfer" :{
+			"ai" : "baseBossAi",
+			"ReleaseSkill" : 32
+		}
+	},
+
+	"thirdFight" :{
+		"type" : "fight",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseBossAi",
+			"ReleaseSkill" : 32
+		}
+	}
+
+}

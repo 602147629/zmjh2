@@ -1,0 +1,44 @@
+module.exports = {
+    //加入房间返回
+    JoinRoomReturn : function(result){
+        var info = {
+            "result" : result
+        };
+
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","JoinRoomReturn",info);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    //退出房间返回
+    LeftRoomReturn : function(result){
+        var info = {
+            "result" : result
+        };
+
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","LeftRoomReturn",info);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    //房间信息变化，发给房间内所有人
+    RoomChanged : function(room){
+        var jObj = {
+            "room" : room.getRoomJsonInfo()
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","RoomChanged",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    //通知客户端游戏结束
+    GameAccountReturn : function(data){
+        var jObj = {
+            "data" : data
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","GameAccount",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    }
+}

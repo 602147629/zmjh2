@@ -1,0 +1,34 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.5
+		},
+
+		"transfer" :{
+			"ai" : "baseBossTieJiangBaiDuOneAi",
+			"ReleaseSkill" : 31
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseBossTieJiangBaiDuTwoAi",
+			"NoneCallback" : 1
+		}
+	}
+}

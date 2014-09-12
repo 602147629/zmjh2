@@ -1,0 +1,2807 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<SEQUENCES>
+	<SEQUENCE>
+		<SID>1000</SID>
+		<Actions>
+			<Action label="wait">5,3,3,3,3,3</Action>
+			<Action label="walk">4,4,4,4</Action>
+			<Action label="run">2,2,2,2</Action>
+			<Action label="jump">1</Action>
+			<Action label="jumpDown">1</Action>
+			<Action label="doubleJump">2,2,2,2,2</Action>
+			<Action label="hit1">2,1,1,8</Action>
+			<Action label="hit2">1,1,1,9</Action>
+			<Action label="hit3">1,1,1,8</Action>
+			<Action label="hit4">2,1,1,10</Action>
+			<Action label="runHit">1,9</Action>
+			<Action label="jumpHit">1,1,2,2,2</Action>
+			<Action label="jumpPressHitUp">1,8</Action>
+			<Action label="jumpPressHitDown">1,12</Action>
+			<Action label="skill1">1,1,1,1,1,2,2,10</Action>
+			<Action label="skill2">1,1,1,9,1,11</Action>
+			<Action label="skill3">1,15,1,1</Action>
+			<Action label="skill4">1,3,4,4,6</Action>
+			<Action label="skill5">1,54</Action>
+			<Action label="skill6">1,1,1,14</Action>
+			<Action label="skill7">1,1,9,3,3,1,11</Action>
+			<Action label="skill8">1,10,1,10,1,10,1,1,15</Action>
+			<Action label="skill9">1,13,1,1</Action>
+			<Action label="skill10">1,1,6,1</Action>
+			<Action label="skillover10">2,2,1,1,6,1,9</Action>
+			<Action label="roll">1,6,6,6,6</Action>
+			<Action label="hurt">1</Action>
+			<Action label="hurtDown">1</Action>
+			<Action label="fall">2,5</Action>
+			<Action label="dead">2,10</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="stand">3,3,3,4,4</Action>
+			<Action label="bossSkill">1,20</Action>
+		</Actions>
+	</SEQUENCE>
+	<SEQUENCE>
+		<SID>1001</SID>
+		<Actions>
+			<Action label="wait">4,2,2,2,2,3</Action>
+			<Action label="walk">4,4,4,4</Action>
+			<Action label="run">2,2,2,2</Action>
+			<Action label="jump">1</Action>
+			<Action label="jumpDown">1</Action>
+			<Action label="doubleJump">2,2,2,2,2</Action>
+			<Action label="hit1">2,1,1,9</Action>
+			<Action label="hit2">1,1,1,8</Action>
+			<Action label="hit3">1,1,1,9</Action>
+			<Action label="hit4">2,1,1,10</Action>
+			<Action label="runHit">1,9</Action>
+			<Action label="jumpHit">1,1,1,10</Action>
+			<Action label="jumpPressHitUp">1,8</Action>
+			<Action label="jumpPressHitDown">1,12</Action>
+			<Action label="skill1">1,8,1,4</Action>
+			<Action label="skill2">1,1,1,8,1,9,1,4</Action>
+			<Action label="skill3">1,1,1,15</Action>
+			<Action label="skill4">1,3,1,22</Action>
+			<Action label="skill5">1,80</Action>
+			<Action label="skill6">1,3,1,1</Action>
+			<Action label="skill7">1,1,1,10</Action>
+			<Action label="skill8">1,1,14</Action>
+			<Action label="skillover8">2,2</Action>
+			<Action label="skilllast8">1,1,6</Action>
+			<Action label="skill9">1,1,2</Action>
+			<Action label="skill10">1,15,1,1</Action>
+			<Action label="roll">1,6,6,6,6</Action>
+			<Action label="hurt">1</Action>
+			<Action label="hurtDown">1</Action>
+			<Action label="fall">2,5</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="stand">3,2,8,4,4,4,4,4,4,4,4</Action>
+			<Action label="bossSkill">1,20</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 狂武 -->
+	<!-- 狂武 普通攻击1 -->
+	<SEQUENCE>
+		<SID>2000</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 普通攻击2 -->
+	<SEQUENCE>
+		<SID>2001</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 普通攻击3 -->
+	<SEQUENCE>
+		<SID>2002</SID>
+		<Actions>
+			<Action label="hit">2,2,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 普通攻击4 -->
+	<SEQUENCE>
+		<SID>2003</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 前冲 -->
+	<SEQUENCE>
+		<SID>2004</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 空中攻击 -->
+	<SEQUENCE>
+		<SID>2005</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 空中压制1 -->
+	<SEQUENCE>
+		<SID>2006</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 空中压制2 -->
+	<SEQUENCE>
+		<SID>2007</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能1 -->
+	<SEQUENCE>
+		<SID>2008</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能2_1-->
+	<SEQUENCE>
+		<SID>2009</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,5</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能3 -->
+	<SEQUENCE>
+		<SID>2010</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能4 -->
+	<SEQUENCE>
+		<SID>2011</SID>
+		<Actions>
+			<Action label="hit">4,4,4,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能5 -->
+	<SEQUENCE>
+		<SID>2012</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能6 -->
+	<SEQUENCE>
+		<SID>2013</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能7_1 -->
+	<SEQUENCE>
+		<SID>2014</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能7_2 -->
+	<SEQUENCE>
+		<SID>2015</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能8_1 -->
+	<SEQUENCE>
+		<SID>2016</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能8_2 -->
+	<SEQUENCE>
+		<SID>2017</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能8_3 -->
+	<SEQUENCE>
+		<SID>2018</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能8_4 -->
+	<SEQUENCE>
+		<SID>2019</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能8_5 -->
+	<SEQUENCE>
+		<SID>2020</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 狂武 技能10_1 -->
+	<SEQUENCE>
+		<SID>2021</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能10_2 -->
+	<SEQUENCE>
+		<SID>2022</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能10_3 -->
+	<SEQUENCE>
+		<SID>2023</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 狂武 技能10_4 -->
+	<SEQUENCE>
+		<SID>2024</SID>
+		<Actions>
+			<Action label="hit">2,2,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 狂武 技能2_2 -->
+	<SEQUENCE>
+		<SID>2025</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 普通攻击1 -->
+	<SEQUENCE>
+		<SID>2100</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 普通攻击2 -->
+	<SEQUENCE>
+		<SID>2101</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 普通攻击3 -->
+	<SEQUENCE>
+		<SID>2102</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 普通攻击4 -->
+	<SEQUENCE>
+		<SID>2103</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 前冲 -->
+	<SEQUENCE>
+		<SID>2104</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 空中攻击 -->
+	<SEQUENCE>
+		<SID>2105</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 空中压制1 -->
+	<SEQUENCE>
+		<SID>2106</SID>
+		<Actions>
+			<Action label="hit">9</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 逍遥 空中压制2 -->
+	<SEQUENCE>
+		<SID>2107</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能1 -->
+	<SEQUENCE>
+		<SID>2108</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能2 -->
+	<SEQUENCE>
+		<SID>2109</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,4,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能3 -->
+	<SEQUENCE>
+		<SID>2110</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 逍遥 技能4_1 -->
+	<SEQUENCE>
+		<SID>2111</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能4_2 -->
+	<SEQUENCE>
+		<SID>2112</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,2,2,2,2,3,3,3,2,2,2,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能5 -->
+	<SEQUENCE>
+		<SID>2113</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能6 -->
+	<SEQUENCE>
+		<SID>2114</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能7_1 -->
+	<SEQUENCE>
+		<SID>2115</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3,3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 逍遥 技能7_2 -->
+	<SEQUENCE>
+		<SID>2116</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能8_1 -->
+	<SEQUENCE>
+		<SID>2117</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 逍遥 技能8_2 -->
+	<SEQUENCE>
+		<SID>2118</SID>
+		<Actions>
+			<Action label="hit">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能9 -->
+	<SEQUENCE>
+		<SID>2119</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能10 -->
+	<SEQUENCE>
+		<SID>2120</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 剑气 -->
+	<SEQUENCE>
+		<SID>2121</SID>
+		<Actions>
+			<Action label="hit">60</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能5剑气水波 -->
+	<SEQUENCE>
+		<SID>2122</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 逍遥 技能5剑气 -->
+	<SEQUENCE>
+		<SID>2123</SID>
+		<Actions>
+			<Action label="hit">1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能5背景 -->
+	<SEQUENCE>
+		<SID>2124</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 逍遥 技能10持续状态 -->
+	<SEQUENCE>
+		<SID>2125</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 逍遥 技能6持续状态 -->
+	<SEQUENCE>
+		<SID>2126</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 乞丐 -->
+	<SEQUENCE>
+		<SID>3000</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">4,4,4,4</Action>
+			<Action label="hit1">2,2,1,10</Action>
+			<Action label="skill1">2,2,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 乞丐 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30001</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 乞丐 技能1 -->
+	<SEQUENCE>
+		<SID>30002</SID>
+		<Actions>
+			<Action label="hit">2,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+
+	<!-- 十方秀才 -->
+	<SEQUENCE>
+		<SID>3001</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">4,4,4,4</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">1,1,15</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 十方秀才 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30011</SID>
+		<Actions>
+			<Action label="hit">1,2,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 十方秀才 技能1 -->
+	<SEQUENCE>
+		<SID>30012</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 十方秀才 援护显示 -->
+	<SEQUENCE>
+		<SID>30012</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 不通老人 -->
+	<SEQUENCE>
+		<SID>3002</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">2,2,1,27,1,1</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 不通老人 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30021</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 不通老人 技能1_1 -->
+	<SEQUENCE>
+		<SID>30022</SID>
+		<Actions>
+			<Action label="hit">10</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 不通老人 技能1_2 -->
+	<SEQUENCE>
+		<SID>30023</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 碧池夫人 -->
+	<SEQUENCE>
+		<SID>3003</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">1,1,2,1,14</Action>
+			<Action label="skill2">1,1,2,1,14</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 碧池夫人 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30031</SID>
+		<Actions>
+			<Action label="hit">3,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 碧池夫人 技能1 -->
+	<SEQUENCE>
+		<SID>30032</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 碧池夫人 技能2 -->
+	<SEQUENCE>
+		<SID>30033</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 持刀强盗 -->
+	<SEQUENCE>
+		<SID>3004</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">1,2,2,2,1,2,2,2,4,1,14</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 持刀强盗 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30041</SID>
+		<Actions>
+			<Action label="hit">1,2,2,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 持刀强盗 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30042</SID>
+		<Actions>
+			<Action label="hit">2,2,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 黑衣刺客 -->
+	<SEQUENCE>
+		<SID>3005</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,1,1,2,1,14,1,4,1,3,7,7</Action>
+			<Action label="skill1">3,1,8,2,2,14</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 黑衣刺客 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30051</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 黑衣刺客 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30052</SID>
+		<Actions>
+			<Action label="hit">2,2,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 斗笠剑客 -->
+	<SEQUENCE>
+		<SID>3006</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">1,1,2,2,2,2,2,2,2,2</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 斗笠剑客 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30061</SID>
+		<Actions>
+			<Action label="hit">2,2,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 斗笠剑客 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30062</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 酒鬼 -->
+	<SEQUENCE>
+		<SID>3007</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15,1,5</Action>
+			<Action label="skill1">2,2,3,1,10,3,1,8,1,14,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="jump">1</Action>
+			<Action label="jumpDown">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 酒鬼 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30071</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 酒鬼 普通攻击2 -->
+	<SEQUENCE>
+		<SID>30072</SID>
+		<Actions>
+			<Action label="hit">3,3,2,2,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 酒鬼 技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30073</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 酒鬼 技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30074</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 酒鬼 技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30075</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 酒鬼 技能攻击1_4 -->
+	<SEQUENCE>
+		<SID>30076</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 酒鬼 技能攻击1_5 -->
+	<SEQUENCE>
+		<SID>30077</SID>
+		<Actions>
+			<Action label="hit">3,3,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 蛤蟆怪 -->
+	<SEQUENCE>
+		<SID>3008</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">1,1,2,2,2,2,1,2,2,2,2,2,2</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 蛤蟆怪 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30081</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 蛤蟆怪 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30082</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 蛤蟆怪 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30083</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 阴阳真人 -->
+	<SEQUENCE>
+		<SID>3009</SID>
+		<Actions>
+			<Action label="wait">3,3,3,3,3,3</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,2,1,15</Action>
+			<Action label="skill1">3,3,1,8</Action>
+			<Action label="skill2">2,2,1,1,60</Action>
+			<Action label="skillover2">2,2,1,9</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+			<Action label="show">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 阴阳真人 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30091</SID>
+		<Actions>
+			<Action label="hit">4,2,1,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 阴阳真人 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30092</SID>
+		<Actions>
+			<Action label="hit">8</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 阴阳真人 技能攻击2 -->
+	<SEQUENCE>
+		<SID>30093</SID>
+		<Actions>
+			<Action label="hit">4,4,4,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 风流道人 -->
+	<SEQUENCE>
+		<SID>3010</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,3,1,13</Action>
+			<Action label="skill1">3,3,1,150</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+			<Action label="show">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 风流道人 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30101</SID>
+		<Actions>
+			<Action label="hit">2,2,2,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 阴阳真人 技能攻击1 -->
+	<SEQUENCE>
+		<SID>30102</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 红莲散人 -->
+	<SEQUENCE>
+		<SID>3011</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,3,1,1,1,16</Action>
+			<Action label="skill1">3,3,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+			<Action label="show">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 红莲散人 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30111</SID>
+		<Actions>
+			<Action label="hit">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 红莲散人 普通攻击2 -->
+	<SEQUENCE>
+		<SID>30112</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 红莲散人 技能攻击2 -->
+	<SEQUENCE>
+		<SID>30113</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道士 -->
+	<SEQUENCE>
+		<SID>3012</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">4,3,1,11</Action>
+			<Action label="skill1">1,1,17,1,20</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+			<Action label="show">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道士 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30121</SID>
+		<Actions>
+			<Action label="hit">3,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道士 技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30122</SID>
+		<Actions>
+			<Action label="hit">4,4,4,4</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道士 技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30123</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道姑 -->
+	<SEQUENCE>
+		<SID>3013</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,3,1,8</Action>
+			<Action label="skill1">1,1,14,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,11</Action>
+			<Action label="fall">2,11</Action>
+			<Action label="show">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道姑 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30131</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小道姑 技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30132</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 小道姑 技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30133</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小乌鸦 -->
+	<SEQUENCE>
+		<SID>3014</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">1,1,12</Action>
+			<Action label="skill1">1,1,3,1,8,1,8</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,11</Action>
+			<Action label="dead">2,2,11</Action>
+			<Action label="fall">2,2,11</Action>
+			<Action label="show">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小乌鸦 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30141</SID>
+		<Actions>
+			<Action label="hit">3,3,3,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小乌鸦 技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30142</SID>
+		<Actions>
+			<Action label="hit">3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小乌鸦 技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30143</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小乌鸦 技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30144</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小树精 -->
+	<SEQUENCE>
+		<SID>3015</SID>
+		<Actions>
+			<Action label="wait">1</Action>
+			<Action label="walk">1</Action>
+			<Action label="hit1">2,2,2,10,3,3,1,8,2,2,2,10</Action>
+			<Action label="skill1">2,2,2,10,1,17,1,10,2,2,2,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">15</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小树精 普通攻击1 -->
+	<SEQUENCE>
+		<SID>30151</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小树精 技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30152</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,1,1,2,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小树精 技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30153</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小树精 技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30154</SID>
+		<Actions>
+			<Action label="hit">4,3,2,2,2,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 索命孤魂 -->
+	<SEQUENCE>
+		<SID>3016</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">4,4,4,4,4,4</Action>
+			<Action label="hit1">2,2,1,1</Action>
+			<Action label="skill1">1,1,5,1,3,4,1,3,4,1,3,4,1,3,4</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,11</Action>
+			<Action label="fall">2,2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 索命孤魂  普通攻击1_1 -->
+	<SEQUENCE>
+		<SID>30161</SID>
+		<Actions>
+			<Action label="hit">3,3,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 索命孤魂  技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30162</SID>
+		<Actions>
+			<Action label="hit">5</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 索命孤魂  技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30163</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 剑魔亡魂 -->
+	<SEQUENCE>
+		<SID>3017</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">1,1,1</Action>
+			<Action label="hit1">3,3,1,8</Action>
+			<Action label="skill1">1,1,10</Action>
+			<Action label="skill2">2,2,2,2,2,1,70</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,11</Action>
+			<Action label="fall">2,2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 剑魔亡魂  普通攻击1 -->
+	<SEQUENCE>
+		<SID>30171</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 剑魔亡魂  技能攻击1 -->
+	<SEQUENCE>
+		<SID>30172</SID>
+		<Actions>
+			<Action label="hit">7</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 剑魔亡魂  技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>30173</SID>
+		<Actions>
+			<Action label="hit">3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 剑魔亡魂  技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>30174</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,15,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 僵尸  -->
+	<SEQUENCE>
+		<SID>3018</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">3,3,3,3,3,4</Action>
+			<Action label="hit1">3,3,1,13</Action>
+			<Action label="skill1">3,3,1,1,1,5</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,11</Action>
+			<Action label="fall">2,2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 僵尸   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30181</SID>
+		<Actions>
+			<Action label="hit">3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 僵尸   技能攻击1 -->
+	<SEQUENCE>
+		<SID>30182</SID>
+		<Actions>
+			<Action label="hit">20</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小火魔  -->
+	<SEQUENCE>
+		<SID>3019</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,3,1,13</Action>
+			<Action label="skill1">1,1,1,24</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,11</Action>
+			<Action label="fall">2,2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小火魔   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30191</SID>
+		<Actions>
+			<Action label="hit">20</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小火魔   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30192</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小火魔   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30193</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身  -->
+	<SEQUENCE>
+		<SID>3020</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">1,1,1</Action>
+			<Action label="hit1">3,3,1,13</Action>
+			<Action label="skill1">3,1,10,1,26</Action>
+			<Action label="skill2">1,1,32</Action>
+			<Action label="skill3">3,1,10,1,26</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,11</Action>
+			<Action label="fall">2,2,11</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30201</SID>
+		<Actions>
+			<Action label="hit">20</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30202</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30203</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>30204</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身  技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>30205</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 冥火焚身  技能攻击3 -->
+	<SEQUENCE>
+		<SID>30206</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 骷髅野鬼  -->
+	<SEQUENCE>
+		<SID>3021</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">2,1,1,2,7,2,2,7</Action>
+			<Action label="skill1">2,2,2,1,1,2,2,4,1,19,1,12,2,2,2,2,2,11</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 骷髅野鬼   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30211</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,3,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 骷髅野鬼   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30212</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 骷髅野鬼   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30213</SID>
+		<Actions>
+			<Action label="hit">16,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 骷髅野鬼   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30214</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 色中恶鬼 -->
+	<SEQUENCE>
+		<SID>3022</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,1,2,3,6</Action>
+			<Action label="skill1">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+			<Action label="skill2">4,3,3,3,1,2,2,2,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 色中恶鬼   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30221</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 色中恶鬼   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30222</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 色中恶鬼   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30223</SID>
+		<Actions>
+			<Action label="hit">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 色中恶鬼   技能攻击2 -->
+	<SEQUENCE>
+		<SID>30224</SID>
+		<Actions>
+			<Action label="hit">7,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 恶魔犬  -->
+	<SEQUENCE>
+		<SID>3023</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">4,2,1,1,2,4,4</Action>
+			<Action label="skill1">3,1,7,56</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 恶魔犬   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30231</SID>
+		<Actions>
+			<Action label="hit">2,1,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 恶魔犬  技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30232</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 恶魔犬  技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30233</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 恶魔犬  技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30234</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒 -->
+	<SEQUENCE>
+		<SID>3024</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">6,4,1,13</Action>
+			<Action label="skill1">5,1,10</Action>
+			<Action label="skill2">6,1,1,8,2,1,11,13</Action>
+			<Action label="skill3">5,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+			<Action label="jumpDown">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30241</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30242</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30243</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30244</SID>
+		<Actions>
+			<Action label="hit">5,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>30245</SID>
+		<Actions>
+			<Action label="hit">2,8,2,12,3,3,2,6</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>30246</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷嗔电怒   技能攻击2_3 -->
+	<SEQUENCE>
+		<SID>30247</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 屠夫 -->
+	<SEQUENCE>
+		<SID>3025</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">5,5,1,7,12</Action>
+			<Action label="skill1">1,1,19,1,10,1,9</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 屠夫   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30251</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 屠夫   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30252</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 屠夫   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30253</SID>
+		<Actions>
+			<Action label="hit">2,2,2,5</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 屠夫   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30254</SID>
+		<Actions>
+			<Action label="hit">1,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男 -->
+	<SEQUENCE>
+		<SID>3026</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">1,1,1</Action>
+			<Action label="hit1">3,1,6</Action>
+			<Action label="skill1">1,1,12,5,10</Action>
+			<Action label="skill2">1,1,8</Action>
+			<Action label="skill3">1,1,7,11,15</Action>
+			<Action label="skill4">1,1,10,4,1,4,10,1,12,5,10</Action>
+			<Action label="skill5">1,1,10,4,1,4,10,1,12,5,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30261</SID>
+		<Actions>
+			<Action label="hit">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30262</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30263</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30264</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击1_4 / 技能攻击1_5 -->
+	<SEQUENCE>
+		<SID>30265</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>30266</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>30267</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 痴男   技能攻击3 -->
+	<SEQUENCE>
+		<SID>30268</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女 -->
+	<SEQUENCE>
+		<SID>3027</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4,4,4</Action>
+			<Action label="walk">1,1,1</Action>
+			<Action label="hit1">1,1,10,4,1,4,10,1,3,4,5,7</Action>
+			<Action label="skill1">1,1,8,1,4,5</Action>
+			<Action label="skill2">1,1,6</Action>
+			<Action label="skill3">1,1,7,11,15</Action>
+			<Action label="skill4">1,1,10,4,1,4,10,1,8,1,4,5</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   普通攻击1_1 / 普通攻击1_2 -->
+	<SEQUENCE>
+		<SID>30271</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   普通攻击1_3 -->
+	<SEQUENCE>
+		<SID>30272</SID>
+		<Actions>
+			<Action label="hit">4,4,5</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30273</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30274</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30275</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>30276</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 怨女   技能攻击3 -->
+	<SEQUENCE>
+		<SID>30277</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小恶魔 -->
+	<SEQUENCE>
+		<SID>3028</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4</Action>
+			<Action label="walk">4,4,4,4</Action>
+			<Action label="hit1">1,1,2,3,3,2,1,2,3,3,3,3,3</Action>
+			<Action label="skill1">1,1,6,7</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小恶魔   普通攻击1_1 -->
+	<SEQUENCE>
+		<SID>30281</SID>
+		<Actions>
+			<Action label="hit">12</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小恶魔   普通攻击1_2 -->
+	<SEQUENCE>
+		<SID>30282</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小恶魔   技能攻击1_1-->
+	<SEQUENCE>
+		<SID>30283</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小恶魔   技能攻击1_2-->
+	<SEQUENCE>
+		<SID>30284</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小恶魔   技能攻击1_3-->
+	<SEQUENCE>
+		<SID>30285</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 贪得无厌 -->
+	<SEQUENCE>
+		<SID>3029</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">1,1,4,4,6,4</Action>
+			<Action label="skill1">3,3,1,2,3,3,3,3,3</Action>
+			<Action label="skill2">1,1,1,3,3,3,3,3,3,3</Action>
+			<Action label="skill3">1,1,2,4,4,4</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 贪得无厌   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30291</SID>
+		<Actions>
+			<Action label="hit">2,2,2,4,6,4</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 贪得无厌   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30292</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 贪得无厌   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30293</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 贪得无厌   技能攻击2 -->
+	<SEQUENCE>
+		<SID>30294</SID>
+		<Actions>
+			<Action label="hit">3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 贪得无厌   技能攻击3 -->
+	<SEQUENCE>
+		<SID>30295</SID>
+		<Actions>
+			<Action label="hit">3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 河童 -->
+	<SEQUENCE>
+		<SID>3030</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,1,4,6,5,6,5</Action>
+			<Action label="skill1">4,3,4,1,39,3</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 河童   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30301</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 河童   技能攻击1 -->
+	<SEQUENCE>
+		<SID>30302</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 铁桨摆渡 -->
+	<SEQUENCE>
+		<SID>3031</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">6,6,6,6</Action>
+			<Action label="hit1">5,2,1,26,2,2,2,2,9</Action>
+			<Action label="skill1">1,1,16</Action>
+			<Action label="skill2">5,1,3,4,16</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 铁桨摆渡   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30311</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 铁桨摆渡   技能攻击1 -->
+	<SEQUENCE>
+		<SID>30312</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 铁桨摆渡   技能攻击2 -->
+	<SEQUENCE>
+		<SID>30313</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小龟 -->
+	<SEQUENCE>
+		<SID>3032</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,1,31,3,2,10</Action>
+			<Action label="skill1">4,2,1,29</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小龟   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30321</SID>
+		<Actions>
+			<Action label="hit">36</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 小龟   技能攻击1 -->
+	<SEQUENCE>
+		<SID>30322</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 绝秀娇俏 -->
+	<SEQUENCE>
+		<SID>3033</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">4,1,2,6,6</Action>
+			<Action label="skill1">5,1,1,2,26</Action>
+			<Action label="skill2">2,1,30</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 绝秀娇俏   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30331</SID>
+		<Actions>
+			<Action label="hit">2,1,2,1,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 绝秀娇俏   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30332</SID>
+		<Actions>
+			<Action label="hit">2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 绝秀娇俏   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30333</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 绝秀娇俏   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>30334</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 绝秀娇俏   技能攻击2 -->
+	<SEQUENCE>
+		<SID>30335</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 歌妓 -->
+	<SEQUENCE>
+		<SID>3034</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">6,6,6,6</Action>
+			<Action label="hit1">3,4,1,19</Action>
+			<Action label="skill1">1,1,1,2,3,2,3,17</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 歌妓   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30341</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 歌妓   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>30342</SID>
+		<Actions>
+			<Action label="hit">2,2,3,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 歌妓   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>30343</SID>
+		<Actions>
+			<Action label="hit">3,3,3,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 黑衣杀手 -->
+	<SEQUENCE>
+		<SID>3035</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">1,1,2,2,2,12</Action>
+			<Action label="skill1">1,1,2,3,3,2,2,2,2,1,10</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 黑衣杀手   普通攻击1_1 -->
+	<SEQUENCE>
+		<SID>30351</SID>
+		<Actions>
+			<Action label="hit">6</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 黑衣杀手   普通攻击1_2 -->
+	<SEQUENCE>
+		<SID>30352</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 黑衣杀手   技能攻击1 -->
+	<SEQUENCE>
+		<SID>30353</SID>
+		<Actions>
+			<Action label="hit">4,3,3,2,2,2,2,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 笑面君子 -->
+	<SEQUENCE>
+		<SID>3036</SID>
+		<Actions>
+			<Action label="wait">5,5,5,5</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">3,4,1,2,11</Action>
+			<Action label="skill1">2,3,2,3,2,4,4,2,1,2,4,3,2,1,1,1,2,2,2,3,3,2,1,1,4,15,3,15</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 笑面君子   普通攻击1 -->
+	<SEQUENCE>
+		<SID>30361</SID>
+		<Actions>
+			<Action label="hit">3,2,2,2,2,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 笑面君子   技能攻击1 -->
+	<SEQUENCE>
+		<SID>30362</SID>
+		<Actions>
+			<Action label="hit">6,3,2,1,1,1,2,2,2,3,3,2,1,1,2,2,1,1,1,1,2,4,3,2,3,3,4,5,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 镖车1 -->
+	<SEQUENCE>
+		<SID>4001</SID>
+		<Actions>
+			<Action label="wait">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+			<Action label="walk">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+			<Action label="groundDead">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+			<Action label="dead">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+			<Action label="hit1">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1 -->
+	<SEQUENCE>
+		<SID>4002</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4</Action>
+			<Action label="walk">5,5,5,5,</Action>
+			<Action label="hit1">2,2,3,1,1,4,9,11</Action>
+			<Action label="skill1">2,7,1,32</Action>
+			<Action label="skill2">10,1,63</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1   普通攻击1 -->
+	<SEQUENCE>
+		<SID>40021</SID>
+		<Actions>
+			<Action label="hit">2,3,3,2,5,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>40022</SID>
+		<Actions>
+			<Action label="hit">2,2,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>40023</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>40024</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>40025</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss1   技能攻击2_3 -->
+	<SEQUENCE>
+		<SID>40026</SID>
+		<Actions>
+			<Action label="hit">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss2 -->
+	<SEQUENCE>
+		<SID>4003</SID>
+		<Actions>
+			<Action label="wait">4,4,4,4</Action>
+			<Action label="walk">5,5,5,5,</Action>
+			<Action label="hit1">1,1,22</Action>
+			<Action label="skill1">2,1,11,3,28</Action>
+			<Action label="skill2">1,1,58</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss2   普通攻击1 -->
+	<SEQUENCE>
+		<SID>40031</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss2   技能攻击1 -->
+	<SEQUENCE>
+		<SID>40032</SID>
+		<Actions>
+			<Action label="hit">1,1,1,2,1,6,3,2,3,2,3,2,3,2,3,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss2   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>40033</SID>
+		<Actions>
+			<Action label="hit">3,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss2   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>40034</SID>
+		<Actions>
+			<Action label="hit">4,4,4,4,4,4</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss2   技能攻击2_3 -->
+	<SEQUENCE>
+		<SID>40035</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3 -->
+	<SEQUENCE>
+		<SID>4004</SID>
+		<Actions>
+			<Action label="wait">2,2,2,2</Action>
+			<Action label="walk">2,2,2,2</Action>
+			<Action label="hit1">6,1,5,4,5,5,5,5,5,4,5,5,10</Action>
+			<Action label="skill1">2,2,2,1,2,2,3,2,3,2,3,5</Action>
+			<Action label="skill2">1,1,2,1,1,2,2,1,1,47,2,2,2,2</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3  普通攻击1 -->
+	<SEQUENCE>
+		<SID>40041</SID>
+		<Actions>
+			<Action label="hit">1,1,2,2,4,4,5,5,5,5,4,5,5,5,1,2,2,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>40042</SID>
+		<Actions>
+			<Action label="hit">2,2,1,1,1,1,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>40043</SID>
+		<Actions>
+			<Action label="hit">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击1_3 -->
+	<SEQUENCE>
+		<SID>40044</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>40045</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>40046</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击2_3 -->
+	<SEQUENCE>
+		<SID>40047</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss3   技能攻击2_4 -->
+	<SEQUENCE>
+		<SID>40048</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss4 -->
+	<SEQUENCE>
+		<SID>4005</SID>
+		<Actions>
+			<Action label="wait">3,2,2,2</Action>
+			<Action label="walk">2,2,2,2,</Action>
+			<Action label="hit1">2,2,2,1,12,2,2,2,2,2,4</Action>
+			<Action label="skill1">1,1,1,2,3,2,3,2,3,2,3,2,3,2</Action>
+			<Action label="skill2">3,3,3,3,3,2,1,3,3,20</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss4  普通攻击1_1 -->
+	<SEQUENCE>
+		<SID>40051</SID>
+		<Actions>
+			<Action label="hit">1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss4   普通攻击1_2 -->
+	<SEQUENCE>
+		<SID>40052</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss4   技能攻击1 -->
+	<SEQUENCE>
+		<SID>40053</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss4   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>40054</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 工作室Boss4   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>40055</SID>
+		<Actions>
+			<Action label="hit">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+
+
+	<!-- 兔爷 -->
+	<SEQUENCE>
+		<SID>4006</SID>
+		<Actions>
+			<Action label="wait">6,6,6,6</Action>
+			<Action label="walk">4,4,4,4</Action>
+			<Action label="hit1">1,1,1,3,3,3</Action>
+			<Action label="skill1">2,1,12,2,2,4,6,6</Action>
+			<Action label="skill2">2,1,69</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   普通攻击1 -->
+	<SEQUENCE>
+		<SID>40061</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击1_1 -->
+	<SEQUENCE>
+		<SID>40062</SID>
+		<Actions>
+			<Action label="hit">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击1_2 -->
+	<SEQUENCE>
+		<SID>40063</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击2_1 -->
+	<SEQUENCE>
+		<SID>40064</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击2_2 -->
+	<SEQUENCE>
+		<SID>40065</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,2,3,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击2_3 -->
+	<SEQUENCE>
+		<SID>40066</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,5,4,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击2_4 -->
+	<SEQUENCE>
+		<SID>40067</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,9,4,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击2_5 -->
+	<SEQUENCE>
+		<SID>40068</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,13,4,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔爷   技能攻击2_6 -->
+	<SEQUENCE>
+		<SID>40069</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,17,4,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔妹 -->
+	<SEQUENCE>
+		<SID>4007</SID>
+		<Actions>
+			<Action label="wait">6,6,6,6</Action>
+			<Action label="walk">5,5,5,5</Action>
+			<Action label="hit1">1,1,2,2</Action>
+			<Action label="skill1">2,2,1,3,3,9</Action>
+			<Action label="skill2">5,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,4</Action>
+			<Action label="hurt">1</Action>
+			<Action label="groundDead">2,2,2,2,2,10</Action>
+			<Action label="dead">2,2,10</Action>
+			<Action label="fall">2,2,10</Action>
+			<Action label="jumpDown">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔妹   普通攻击1 -->
+	<SEQUENCE>
+		<SID>40071</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔妹   技能攻击1 -->
+	<SEQUENCE>
+		<SID>40072</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 兔妹   技能攻击2 -->
+	<SEQUENCE>
+		<SID>40073</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<SEQUENCE>
+		<SID>5001</SID>
+		<Actions>
+			<Action label="wait">10</Action>
+			<Action label="plane_down">4,4,4,4,4,4,4,4</Action>
+			<Action label="plane_up">4,4,4,4,4,4,4,4</Action>
+		</Actions>
+	</SEQUENCE>
+	<SEQUENCE>
+		<SID>6001</SID>
+		<Actions>
+			<Action label="hit">2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<SEQUENCE>
+		<SID>7000</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1</Action>
+			<Action label="hit1">1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<SEQUENCE>
+		<SID>7001</SID>
+		<Actions>
+			<Action label="hit">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 倒计时 -->
+	<SEQUENCE>
+		<SID>10000</SID>
+		<Actions>
+			<Action label="show">30,30,30</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 数字 -->
+	<SEQUENCE>
+		<SID>10001</SID>
+		<Actions>
+			<Action label="0">1</Action>
+			<Action label="1">1</Action>
+			<Action label="2">1</Action>
+			<Action label="3">1</Action>
+			<Action label="4">1</Action>
+			<Action label="5">1</Action>
+			<Action label="6">1</Action>
+			<Action label="7">1</Action>
+			<Action label="8">1</Action>
+			<Action label="9">1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 无双消耗 -->
+	<SEQUENCE>
+		<SID>10002</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 无双蓄满 -->
+	<SEQUENCE>
+		<SID>10003</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 无双释放 -->
+	<SEQUENCE>
+		<SID>10004</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 无双玩家身上效果 -->
+	<SEQUENCE>
+		<SID>10005</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- Boss光环 -->
+	<SEQUENCE>
+		<SID>10006</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 施放无双主角身上效果 -->
+	<SEQUENCE>
+		<SID>10007</SID>
+		<Actions>
+			<Action label="show">1,1,2,2,2,2,2,2,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 主角复活-->
+	<SEQUENCE>
+		<SID>10008</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 强化效果-->
+	<SEQUENCE>
+		<SID>10009</SID>
+		<Actions>
+			<Action label="show">3,3,2,2,2,2,2,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 打造效果1-->
+	<SEQUENCE>
+		<SID>10010</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+		<!-- 打造效果2-->
+	<SEQUENCE>
+		<SID>10011</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+	<!-- 召唤效果-->
+	<SEQUENCE>
+		<SID>10012</SID>
+		<Actions>
+			<Action label="show">3,3,3,3,3,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 施放无双主角身上效果 -->
+	<SEQUENCE>
+		<SID>10013</SID>
+		<Actions>
+			<Action label="show">1,1,2,2,2,2,2,2,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 升级效果-->
+	<SEQUENCE>
+		<SID>10014</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 附体效果-->
+	<SEQUENCE>
+		<SID>10015</SID>
+		<Actions>
+			<Action label="show">1,1,1,1,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 附体效果-->
+	<SEQUENCE>
+		<SID>10016</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 获得宝藏-->
+	<SEQUENCE>
+		<SID>10017</SID>
+		<Actions>
+			<Action label="show">3,3,3,3,3,3</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雨丝落下 -->
+	<SEQUENCE>
+		<SID>10018</SID>
+		<Actions>
+			<Action label="wait">1</Action>
+			<Action label="show">2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 异闻任务鬼火 -->
+	<SEQUENCE>
+		<SID>10019</SID>
+		<Actions>
+			<Action label="show">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 攻击BUFF -->
+	<SEQUENCE>
+		<SID>10020</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 攻击Status -->
+	<SEQUENCE>
+		<SID>10021</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 加速BUFF -->
+	<SEQUENCE>
+		<SID>10022</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 加速Status -->
+	<SEQUENCE>
+		<SID>10023</SID>
+		<Actions>
+			<Action label="hit">2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 伤害数字 -->
+	<SEQUENCE>
+		<SID>10024</SID>
+		<Actions>
+			<Action label="show">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 自动战斗霸体 -->
+	<SEQUENCE>
+		<SID>10025</SID>
+		<Actions>
+			<Action label="show">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷雨天气闪电   1 -->
+	<SEQUENCE>
+		<SID>10026</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 雷雨天气闪电   2 -->
+	<SEQUENCE>
+		<SID>10027</SID>
+		<Actions>
+			<Action label="hit">5,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 异闻任务漩涡 -->
+	<SEQUENCE>
+		<SID>10028</SID>
+		<Actions>
+			<Action label="show">1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 魅惑效果 -->
+	<SEQUENCE>
+		<SID>10029</SID>
+		<Actions>
+			<Action label="hit">1,1,1,1,1,1,1,1,1,1,1,1,1,1</Action>
+		</Actions>
+	</SEQUENCE>
+
+	<!-- 称号 -->
+	<SEQUENCE>
+		<SID>10030</SID>
+		<Actions>
+			<Action label="show">2,2,2,2,2,2,2,2</Action>
+		</Actions>
+	</SEQUENCE>
+
+</SEQUENCES>

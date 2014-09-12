@@ -1,0 +1,28 @@
+var rcc = require('../../../../../controllor/RpcConnectorControllor.js');
+var smPublicNotice = require('../../../../Game/message/handler/sm/SMPublicNotice.js');
+
+var RMPublicNotice = {};
+
+RMPublicNotice.GetPubliNoticeData = function(buffer,client){
+    var str = buffer.toString();
+    var jObj = JSON.parse(str);
+    var data = jObj.data;
+    var gameKey = data.gameKey;
+    var rpcData = jObj.rpcData;
+
+//    require("Log").trace("玩家"+gameKey+"发送到公告管理器 数据:");
+
+    var cb = function(err,data){
+        if(!err){
+            if(data.err){
+                client.send(smPublicNotice.PublicNoticeReturn(data.err));
+            }
+        }else{
+            require("Log").error("发送公告出错！"+err+"gameKey:"+client.currentPlayer.gameKey);
+        }
+    }
+
+    rcc.BrocastByPath("Game","RMFromPublicNoticeManager","AddBroadcastMessage",data,cb);
+}
+
+module.exports = RMPublicNotice;

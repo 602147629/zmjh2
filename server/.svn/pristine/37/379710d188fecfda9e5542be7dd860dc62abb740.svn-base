@@ -1,0 +1,5 @@
+package com.chrisdew.buftest;
+
+message BufTest {
+  required string body = 1;
+}

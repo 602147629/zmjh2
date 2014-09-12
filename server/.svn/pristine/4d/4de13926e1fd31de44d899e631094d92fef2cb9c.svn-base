@@ -1,0 +1,123 @@
+var EventEmitter = require("events").EventEmitter;
+var simpleClientClass = require("../../net/SimpleClient.js");
+var pControlClass = require("../../controllor/ProtocalControllor.js");
+
+function GateClient(socket,msgFiles){
+    simpleClientClass.call(this,socket);
+
+    this.msgFiles = msgFiles;
+    this.type = 'CLIENT';
+
+    this.pControl = new pControlClass([3,3,5,6,7,2,2],[2,2,3,7,1,6,5]);
+}
+
+require('util').inherits(GateClient, simpleClientClass);
+
+
+GateClient.prototype.pControl;//加密解密key
+
+
+//将收到的包打印出来
+GateClient.prototype.logReceiveData = function(fileName,funcName,buf){
+    require("Log").info("收到玩家发来消息包！路径:"+fileName+"."+funcName+",包体:"+buf.toString());
+}
+
+//获取加密密钥
+GateClient.prototype.GetEncodeProtocolKey = function(){
+    return this.pControl.GetEncodeProtocolKey();
+}
+//获取解密密钥
+GateClient.prototype.GetDecodeProtocolKey = function(){
+    return this.pControl.GetDecodeProtocolKey();
+}
+
+//根据protocol.json解析协议字典
+GateClient.prototype.analysePath = function(path){
+    var pathArr = path.split(".");
+    if(pathArr.length == 2){
+        //按字典解析path
+        var fileName = require('BufferTools').protocol["protocolToServerFile"][pathArr[0]];
+        if(!fileName){
+            require("Log").error("fileName--not found:"+pathArr[0]+",gameKey:"+this.user.gameKey);
+            return [];
+        }
+        var funcName = require('BufferTools').protocol["protocolToServerFunc"][fileName][pathArr[1]];
+        if(!funcName){
+            require("Log").error("funcName--not found:"+pathArr[1]+",gameKey:"+this.user.gameKey);
+            return [];
+        }
+
+        return [fileName,funcName];
+    }else{
+        require("Log").error("协议路径错误!path:"+path+",gameKey:"+this.user.gameKey);
+        this.destroy();
+    }
+    return [];
+}
+
+//加密
+GateClient.prototype.encrypt = function(buffer){
+    //加密
+    var len = buffer.length;
+    //加密key
+    var key = this.GetEncodeProtocolKey();
+    for(var i=4;i<len;i++){
+        buffer[i] = buffer[i]^key;
+    }
+}
+//解密
+GateClient.prototype.decrypt = function(buffer){
+    var len = buffer.length;
+    //解密密钥
+    var key = this.GetDecodeProtocolKey();
+    for(var i=0;i<len;i++){
+        buffer[i] = buffer[i]^key;
+    }
+}
+
+GateClient.prototype.doWhenQuit = function(){
+    if(this.isDestroyed){
+        return;
+    }
+
+    if(this.pControl){
+        this.pControl.destroy();
+        this.pControl = null;
+    }
+    simpleClientClass.prototype.doWhenQuit.bind(this)();
+}
+
+
+//发送消息
+GateClient.prototype.send = function(buffer){
+//    require("Log").trace("============this.isDestroyed;"+this.isDestroyed+",uid:"+this.user.uid);
+    if(this.isDestroyed){
+        return;
+    }
+    //console.log("---send----length:"+buffer.length);
+    //打印调试(消耗性能，正式场合关掉)
+//    var pathLen = buffer.readInt16LE(4);
+//    var path = buffer.toString("utf8",6,6+pathLen);
+//    var data = buffer.toString("utf8",6+pathLen);
+//    var pathArr = path.split(".");
+//    //还原path
+//    var fileName;
+//    var funcName;
+//    var fileObj = pDict.GetData("protocolToClientFile");
+//    Object.keys(fileObj).forEach(function(key){
+//        if(fileObj[key] == pathArr[0]){
+//            fileName = key;
+//        }
+//    });
+//    var funcObj = pDict.GetData("protocolToClientFunc")[fileName];
+//    Object.keys(funcObj).forEach(function(key){
+//        if(funcObj[key] == pathArr[1]){
+//            funcName = key;
+//        }
+//    });
+//    require("Log").trace("SEND--->PATH->"+fileName+"->"+funcName+",----"+data);
+    simpleClientClass.prototype.send.bind(this)(buffer);
+}
+
+
+module.exports = GateClient;

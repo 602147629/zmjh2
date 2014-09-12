@@ -1,0 +1,93 @@
+{
+	"BevSelectorNode" :
+	{
+		"id" : 0,
+		"name" : "root",
+		"params" : "false",
+		"callback" : "",
+		"BevSequenceNode_0" : {
+			"id" : 0,
+			"name" : "find",
+			"params" : "false",
+			"callback" : "",
+			"BevIsOnAttackNode" : {
+				"id" : 0,
+				"name" : "isStartAttack",
+				"params" : "false",
+				"callback" : ""
+			},
+			"BevDistanceNode" : {
+				"id" : 1,
+				"name" : "distance",
+				"params" : "false|1000",
+				"callback" : ""
+			},
+			"BevMonsterLeftMove" : {
+				"id" : 2,
+				"name" : "leftMove",
+				"params" : "false",
+				"callback" : ""
+			}
+		},
+		"BevSequenceNode_1" : {
+			"id" : 1,
+			"name" : "fallDown",
+			"params" : "false",
+			"callback" : "",
+			"BevIsStandUpNode" : {
+				"id" : 0,
+				"name" : "standUp",
+				"params" : "false",
+				"callback" : ""
+			},
+			"BevStandUpAttackNode" : {
+				"id" : 1,
+				"name" : "fight",
+				"params" : "false|32",
+				"callback" : ""
+			}
+		},
+		"BevSequenceNode_2" : {
+			"id" : 2,
+			"name" : "patrol",
+			"params" : "false",
+			"callback" : "",
+			"BevIsOnAttackNode" : {
+				"id" : 0,
+				"name" : "startAttack",
+				"params" : "false",
+				"callback" : ""
+			},
+			"BevBoardRangeNode" : {
+				"id" : 1,
+				"name" : "board",
+				"params" : "false|skill",
+				"callback" : ""
+			},
+			"BevAttackRangeNode" : {
+				"id" : 2,
+				"name" : "range",
+				"params" : "false|skill",
+				"callback" : ""
+			},
+			"BevAttackMoveNode" : {
+				"id" : 3,
+				"name" : "move",
+				"params" : "false|skill",
+				"callback" : ""
+			}
+		},
+		"BevSequenceNode_3" : {
+			"id" : 3,
+			"name" : "attack",
+			"params" : "false",
+			"callback" : "",
+			"BevContinueAttackNode" : {
+				"id" : 0,
+				"name" : "fight",
+				"params" : "false|31_31_31_32",
+				"callback" : ""
+			}
+		}
+	}
+}

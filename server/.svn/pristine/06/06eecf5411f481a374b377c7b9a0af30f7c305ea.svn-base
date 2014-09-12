@@ -1,0 +1,53 @@
+var RMMatchEscort = {};
+var matchEscortC = require("../../../controllor/matchEscortControllor.js");
+
+//申请自动匹配
+RMMatchEscort.MatchEscort = function(buffer,client){
+    var str = buffer.toString();
+    var jObj = JSON.parse(str);
+    var data = jObj.data;
+    var rpcData = jObj.rpcData;
+    var gameKey = data.gameKey;
+    var gameServerId = data.gameServerId;
+    var pipeiData = data.pipeiData;
+    var playerData = data.playerData;
+
+    var obj = {
+        "gameKey" : gameKey,
+        "gameServerId" : gameServerId,
+        "playerData":playerData,
+        "pipeiData" : pipeiData,
+        "escortType" : pipeiData.isEscort,
+        "pipeiCount" : 1
+    }
+    require("Log").trace("玩家data："+JSON.stringify(obj));
+    require("Log").info("开始匹配护镖！");
+
+    matchEscortC.AddClient(obj,function(err,result){
+        client.send({"err":err},rpcData);
+    });
+}
+
+//取消自动匹配
+RMMatchEscort.CancelMatchEscort = function(buffer,client){
+    var str = buffer.toString();
+    var jObj = JSON.parse(str);
+    var data = jObj.data;
+    var rpcData = jObj.rpcData;
+    var gameKey = data.gameKey;
+
+
+    matchEscortC.RemoveClient(gameKey,function(err){
+        client.send({"err":err},rpcData);
+    });
+
+//    var result = 0;
+//    if(autoC.GetPipeiUser(gameKey)){
+//        autoC.RemoveClient(gameKey);
+//        result = 1;
+//    }
+//    client.send({"result":result},rpcData);
+}
+
+
+module.exports = RMMatchEscort;

@@ -1,0 +1,1341 @@
+﻿{
+		  "midAutumn":{
+					"moonCakeCount" : 10,
+					"alreadyGet" : "1|1|0|0|0|0"
+		  },
+		  "titleInfo":{
+					"titleOwned":"7501|7502|7503|7504|7505|7506|7507|7509|7510",
+					"titleNow":7510,
+					"titleShow":1
+		  },
+          "escort": {
+                    "lootTime": "",
+                    "escortTime": "",
+                    "escortCount": 3,
+                    "time": "2014-08-11 00:04:30",
+                    "lootCount": 3
+          },
+          "black_market": {
+                    "blackMarketTime": "2014-08-08 00:04:30",
+                    "items": "9000:0|4301:0|6201:0|6204:0|6205:1|4311:0",
+                    "itemsEnable": "0|1|1|1|1|1",
+                    "freeRefresh": 1
+          },
+          "heroScript": {
+                    "addValueArr": "30000|3000|1400|400|1400|400",
+                    "heroSpecialFightNum": 1,
+                    "heroTime": "2014-08-08 00:04:30",
+                    "heroSpecialFightCount": 33,
+                    "heroFightNum": 3
+          },
+          "guide": 259,
+          "baGuaRoomMax": 24,
+          "gift": {
+                    "0": {
+                              "id": 6024,
+                              "getTime": "2014-06-06 22:48:42",
+                              "isGet": 1
+                    },
+                    "1": {
+                              "id": 6091,
+                              "getTime": "2014-06-06 22:48:38",
+                              "isGet": 1
+                    },
+                    "2": {
+                              "id": 6090,
+                              "getTime": "2014-06-12 12:22:55",
+                              "isGet": 1
+                    },
+                    "3": {
+                              "id": 6092,
+                              "getTime": "2014-06-12 12:22:56",
+                              "isGet": 1
+                    },
+                    "4": {
+                              "id": 6021,
+                              "getTime": "2014-06-12 12:26:34",
+                              "isGet": 1
+                    },
+                    "5": {
+                              "id": 6026,
+                              "getTime": "2014-07-01 18:55:45",
+                              "isGet": 1
+                    },
+                    "6": {
+                              "id": 6093,
+                              "getTime": "2014-07-01 18:55:45",
+                              "isGet": 1
+                    },
+                    "7": {
+                              "id": 6025,
+                              "getTime": "2014-07-14 11:26:54",
+                              "isGet": 1
+                    },
+                    "8": {
+                              "id": 6028,
+                              "getTime": "2014-07-19 02:48:13",
+                              "isGet": 1
+                    },
+                    "9": {
+                              "id": 6094,
+                              "getTime": "2014-07-31 15:24:23",
+                              "isGet": 1
+                    },
+                    "10": {
+                              "id": 6023,
+                              "getTime": "2014-08-01 19:06:17",
+                              "isGet": 1
+                    },
+                    "11": {
+                              "id": 6058,
+                              "getTime": "2014-08-05 18:45:24",
+                              "isGet": 1
+                    }
+          },
+          "achieve": "1|1|1|1|1|1",
+          "vipRepair": 1,
+          "exp": 22424792,
+          "jingMai": {
+                    "bookPoint": 14,
+                    "jingMaiArr": "5|5|6|6|7|7|7|7|7|7|-1|-1|-1|-1|-1|-1"
+          },
+          "online_bonus": {
+                    "lv": 6,
+                    "onlineTime": "2014-08-08 11:21:46"
+          },
+          "now_equipment": {
+                    "shoulder": 1405,
+                    "clothes": 1305,
+                    "shoes": 1505,
+                    "weapon": 1005,
+                    "head": 1105,
+                    "neck": 1205
+          },
+          "vip": {
+                    "curCoupon": 21,
+                    "totalRecharge": 51500,
+                    "firstCharge": 0,
+                    "isVipGiftGet": 1,
+                    "vipGiftGetTime": "2014-08-08 00:05:59"
+          },
+          "log": {
+                    "nameChange": 1
+          },
+          "version": 1191,
+          "now_attach": {
+                    "back": 10004,
+                    "front": 10011,
+                    "middle": 10021
+          },
+          "dungeon_pass": {
+                    "1_5": {
+                              "name": "1_5",
+                              "hurt": 2,
+                              "lv": 5,
+                              "time": 26,
+                              "add": 4000,
+                              "hit": 195
+                    },
+                    "4_6": {
+                              "name": "4_6",
+                              "hurt": 41306,
+                              "lv": 5,
+                              "time": 117,
+                              "add": 3967,
+                              "hit": 519
+                    },
+                    "2_2": {
+                              "name": "2_2",
+                              "hurt": 191,
+                              "lv": 5,
+                              "time": 27,
+                              "add": 4000,
+                              "hit": 317
+                    },
+                    "1_2": {
+                              "name": "1_2",
+                              "hurt": 1,
+                              "lv": 5,
+                              "time": 24,
+                              "add": 4000,
+                              "hit": 130
+                    },
+                    "3_7": {
+                              "name": "3_7",
+                              "hurt": 1620,
+                              "lv": 5,
+                              "time": 76,
+                              "add": 4000,
+                              "hit": 518
+                    },
+                    "4_2": {
+                              "name": "4_2",
+                              "hurt": 24282,
+                              "lv": 5,
+                              "time": 86,
+                              "add": 4000,
+                              "hit": 399
+                    },
+                    "1_6": {
+                              "name": "1_6",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 25,
+                              "add": 4000,
+                              "hit": 197
+                    },
+                    "4_1": {
+                              "name": "4_1",
+                              "hurt": 852,
+                              "lv": 5,
+                              "time": 85,
+                              "add": 4000,
+                              "hit": 542
+                    },
+                    "3_11": {
+                              "name": "3_11",
+                              "hurt": 61025,
+                              "lv": 5,
+                              "time": 116,
+                              "add": 4000,
+                              "hit": 298
+                    },
+                    "2_8": {
+                              "name": "2_8",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 50,
+                              "add": 4000,
+                              "hit": 517
+                    },
+                    "3_5": {
+                              "name": "3_5",
+                              "hurt": 9490,
+                              "lv": 5,
+                              "time": 85,
+                              "add": 4000,
+                              "hit": 948
+                    },
+                    "2_10": {
+                              "name": "2_10",
+                              "hurt": 2000,
+                              "lv": 5,
+                              "time": 55,
+                              "add": 4000,
+                              "hit": 355
+                    },
+                    "2_4": {
+                              "name": "2_4",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 43,
+                              "add": 4000,
+                              "hit": 299
+                    },
+                    "1_1": {
+                              "name": "1_1",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 21,
+                              "add": 4000,
+                              "hit": 106
+                    },
+                    "1_9": {
+                              "name": "1_9",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 27,
+                              "add": 4000,
+                              "hit": 302
+                    },
+                    "3_2": {
+                              "name": "3_2",
+                              "hurt": 1086,
+                              "lv": 5,
+                              "time": 76,
+                              "add": 4000,
+                              "hit": 526
+                    },
+                    "3_1": {
+                              "name": "3_1",
+                              "hurt": 2000,
+                              "lv": 5,
+                              "time": 57,
+                              "add": 4000,
+                              "hit": 524
+                    },
+                    "3_6": {
+                              "name": "3_6",
+                              "hurt": 9519,
+                              "lv": 5,
+                              "time": 78,
+                              "add": 4000,
+                              "hit": 540
+                    },
+                    "3_8": {
+                              "name": "3_8",
+                              "hurt": 8779,
+                              "lv": 5,
+                              "time": 77,
+                              "add": 4000,
+                              "hit": 456
+                    },
+                    "1_3": {
+                              "name": "1_3",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 27,
+                              "add": 4000,
+                              "hit": 114
+                    },
+                    "3_12": {
+                              "name": "3_12",
+                              "hurt": 37045,
+                              "lv": 5,
+                              "time": 93,
+                              "add": 4000,
+                              "hit": 383
+                    },
+                    "2_6": {
+                              "name": "2_6",
+                              "hurt": 360,
+                              "lv": 5,
+                              "time": 36,
+                              "add": 4000,
+                              "hit": 464
+                    },
+                    "2_5": {
+                              "name": "2_5",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 39,
+                              "add": 4000,
+                              "hit": 526
+                    },
+                    "1_4": {
+                              "name": "1_4",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 26,
+                              "add": 4000,
+                              "hit": 138
+                    },
+                    "4_7": {
+                              "name": "4_7",
+                              "hurt": 0,
+                              "lv": 5,
+                              "time": 0,
+                              "add": 0,
+                              "hit": 0
+                    },
+                    "1_12": {
+                              "name": "1_12",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 36,
+                              "add": 4000,
+                              "hit": 527
+                    },
+                    "4_3": {
+                              "name": "4_3",
+                              "hurt": 1000,
+                              "lv": 5,
+                              "time": 140,
+                              "add": 3862,
+                              "hit": 354
+                    },
+                    "2_3": {
+                              "name": "2_3",
+                              "hurt": 421,
+                              "lv": 5,
+                              "time": 32,
+                              "add": 4000,
+                              "hit": 513
+                    },
+                    "3_4": {
+                              "name": "3_4",
+                              "hurt": 1039,
+                              "lv": 5,
+                              "time": 69,
+                              "add": 4000,
+                              "hit": 520
+                    },
+                    "2_12": {
+                              "name": "2_12",
+                              "hurt": 812,
+                              "lv": 5,
+                              "time": 64,
+                              "add": 4000,
+                              "hit": 760
+                    },
+                    "4_5": {
+                              "name": "4_5",
+                              "hurt": 55197,
+                              "lv": 5,
+                              "time": 119,
+                              "add": 3964,
+                              "hit": 515
+                    },
+                    "2_7": {
+                              "name": "2_7",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 48,
+                              "add": 4000,
+                              "hit": 529
+                    },
+                    "1_7": {
+                              "name": "1_7",
+                              "hurt": 1,
+                              "lv": 5,
+                              "time": 25,
+                              "add": 4000,
+                              "hit": 180
+                    },
+                    "3_3": {
+                              "name": "3_3",
+                              "hurt": 1000,
+                              "lv": 5,
+                              "time": 75,
+                              "add": 4000,
+                              "hit": 482
+                    },
+                    "2_9": {
+                              "name": "2_9",
+                              "hurt": 12716,
+                              "lv": 5,
+                              "time": 61,
+                              "add": 4000,
+                              "hit": 311
+                    },
+                    "3_10": {
+                              "name": "3_10",
+                              "hurt": 2000,
+                              "lv": 5,
+                              "time": 87,
+                              "add": 4000,
+                              "hit": 162
+                    },
+                    "1_10": {
+                              "name": "1_10",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 29,
+                              "add": 4000,
+                              "hit": 325
+                    },
+                    "2_11": {
+                              "name": "2_11",
+                              "hurt": 2000,
+                              "lv": 5,
+                              "time": 63,
+                              "add": 4000,
+                              "hit": 385
+                    },
+                    "2_1": {
+                              "name": "2_1",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 26,
+                              "add": 4000,
+                              "hit": 341
+                    },
+                    "1_11": {
+                              "name": "1_11",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 36,
+                              "add": 4000,
+                              "hit": 512
+                    },
+                    "1_8": {
+                              "name": "1_8",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "time": 24,
+                              "add": 4000,
+                              "hit": 316
+                    },
+                    "4_4": {
+                              "name": "4_4",
+                              "hurt": 48353,
+                              "lv": 5,
+                              "time": 108,
+                              "add": 4000,
+                              "hit": 388
+                    },
+                    "3_9": {
+                              "name": "3_9",
+                              "hurt": 66725,
+                              "lv": 5,
+                              "time": 122,
+                              "add": 4000,
+                              "hit": 530
+                    },
+                    "4_8": {
+                              "name": "4_8",
+                              "hurt": 48353,
+                              "lv": 5,
+                              "time": 108,
+                              "add": 4000,
+                              "hit": 388
+                    },
+                    "4_9": {
+                              "name": "4_9",
+                              "hurt": 48353,
+                              "lv": 5,
+                              "time": 108,
+                              "add": 4000,
+                              "hit": 388
+                    },
+                    "5_1": {
+                              "name": "5_1",
+                              "hurt": 48353,
+                              "lv": 5,
+                              "time": 108,
+                              "add": 4000,
+                              "hit": 388
+                    }
+          },
+          "skill_up": {
+                    "skillBooks8": "5|10|15|0|0",
+                    "skillBooks3": "5|10|15|0|0",
+                    "skillBooks6": "5|10|15|0|0",
+                    "skillLevels": "3|2|3|3|2|3|3|3|2|3",
+                    "skillBooks1": "5|10|15|0|0",
+                    "skillBooks9": "5|10|15|0|0",
+                    "skillBooks4": "5|10|15|0|0",
+                    "skillBooks7": "5|10|15|0|0",
+                    "skillBooks2": "5|10|15|0|0",
+                    "skillBooks10": "5|10|15|0|0",
+                    "skillBooks5": "5|10|15|0|0"
+          },
+          "baGuaScore": 13570,
+          "double_dungeon": {
+                    "doubleTime": "",
+                    "dungeonName": ""
+          },
+          "baGua_pieces": {
+                    "0": {
+                              "id": 8206,
+                              "lv": 9,
+                              "exp": 81920,
+                              "cid": -6
+                    },
+                    "1": {
+                              "id": 8204,
+                              "lv": 9,
+                              "exp": 81920,
+                              "cid": -4
+                    },
+                    "2": {
+                              "id": 8208,
+                              "lv": 9,
+                              "exp": 81920,
+                              "cid": -8
+                    },
+                    "3": {
+                              "id": 8201,
+                              "lv": 10,
+                              "exp": 81920,
+                              "cid": -1
+                    },
+                    "4": {
+                              "id": 8203,
+                              "lv": 10,
+                              "exp": 81920,
+                              "cid": -3
+                    },
+                    "5": {
+                              "id": 8205,
+                              "lv": 9,
+                              "exp": 81920,
+                              "cid": -5
+                    },
+                    "6": {
+                              "id": 8207,
+                              "lv": 10,
+                              "exp": 81920,
+                              "cid": -7
+                    },
+                    "7": {
+                              "id": 8202,
+                              "lv": 10,
+                              "exp": 81920,
+                              "cid": -2
+                    }
+          },
+          "daily_mission": {
+                    "isComplete": 0,
+                    "missionTime": "2014-08-08 00:04:30",
+                    "missionCount": 0,
+                    "missionDungeon": "2_3_1",
+                    "missionType": 1,
+                    "materialType": 1
+          },
+          "fashionInfo": {
+                    "showFashion": 0,
+                    "fashionId": 7006
+          },
+          "auto_fight": {
+                    "autoFightCount": 0,
+                    "rpCardCount": 0,
+                    "doubleCardCount": 0
+          },
+          "baGuaFortune": 4,
+          "hide_mission": {
+                    "0": {
+                              "id": 3001,
+                              "isComplete": 1,
+                              "missionConfig": "1|1|1|1|1",
+                              "isShow": 0
+                    },
+                    "1": {
+                              "id": 3002,
+                              "isComplete": 1,
+                              "missionConfig": "1|1|1",
+                              "isShow": 0
+                    },
+                    "2": {
+                              "id": 3011,
+                              "isComplete": 1,
+                              "missionConfig": "1|1|1|1|1",
+                              "isShow": 0
+                    },
+                    "3": {
+                              "id": 3012,
+                              "isComplete": 1,
+                              "missionConfig": "1|1|1",
+                              "isShow": 0
+                    },
+                    "4": {
+                              "id": 3021,
+                              "isComplete": 1,
+                              "missionConfig": "1|1|1|1|1",
+                              "isShow": 0
+                    },
+                    "5": {
+                              "id": 3022,
+                              "isComplete": 1,
+                              "missionConfig": "1|1|1",
+                              "isShow": 0
+                    }
+          },
+          "elite_dungeon_pass": {
+                    "1_3": {
+                              "name": "1_3",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 311
+                    },
+                    "2_2": {
+                              "name": "2_2",
+                              "hurt": 386,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 528
+                    },
+                    "1_2": {
+                              "name": "1_2",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 158
+                    },
+                    "2_3": {
+                              "name": "2_3",
+                              "hurt": 2000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 293
+                    },
+                    "3_4": {
+                              "name": "3_4",
+                              "hurt": 81347,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 502
+                    },
+                    "4_1": {
+                              "name": "4_1",
+                              "hurt": 2000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 482
+                    },
+                    "3_3": {
+                              "name": "3_3",
+                              "hurt": 0,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 382
+                    },
+                    "time": {
+                              "name": "time",
+                              "time": "2014-08-08 00:04:30"
+                    },
+                    "2_4": {
+                              "name": "2_4",
+                              "hurt": 1152,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 506
+                    },
+                    "2_1": {
+                              "name": "2_1",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 530
+                    },
+                    "3_2": {
+                              "name": "3_2",
+                              "hurt": 1720,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 522
+                    },
+                    "1_1": {
+                              "name": "1_1",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 171
+                    },
+                    "3_1": {
+                              "name": "3_1",
+                              "hurt": 708,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 532
+                    },
+                    "1_4": {
+                              "name": "1_4",
+                              "hurt": 3000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 582
+                    },
+                    "4_2": {
+                              "name": "4_2",
+                              "hurt": 1000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 356
+                    },
+                    "4_3": {
+                              "name": "4_3",
+                              "hurt": 1000,
+                              "lv": 5,
+                              "add": 4000,
+                              "num": 0,
+                              "hit": 356
+                    }
+          },
+          "now_assist": 10033,
+          "wuyi": {
+                    "time": "",
+                    "isGet": 0
+          },
+          "skill": {
+                    "skill3": 0,
+                    "kungfu2": 5,
+                    "L": 3,
+                    "U": 7,
+                    "skill7": 1,
+                    "skill10": 1,
+                    "skill1": 0,
+                    "skill2": 0,
+                    "skill5": 0,
+                    "O": 4,
+                    "H": 10,
+                    "skill4": 1,
+                    "skill8": 1,
+                    "I": 8,
+                    "kungfu1": 5,
+                    "skill6": 1,
+                    "skill9": 0
+          },
+          "soul": 34622393,
+          "sign_in": {
+                    "achievements": 960,
+                    "signInTime": "2014-08-08 00:05:46",
+                    "signInCount": 25
+          },
+          "occupation": 1,
+          "baGua_attach": "8201|8202|8203|8204|8205|8206|8207|8208",
+          "main_mission": {
+                    "id": 1011,
+                    "isComplete": 0
+          },
+          "money": 8680971,
+          "statistics": {
+                    "statisticsTime": "2014-08-19 00:05:44",
+                    "publicNoticeCount": 2,
+                    "weatherPropCount": 0
+          },
+          "pack": {
+                    "bossCard": {
+                              "boss7": {
+                                        "id": 10021,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 70,
+                                        "isAssisted": 0
+                              },
+                              "boss3": {
+                                        "id": 10004,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 64,
+                                        "isAssisted": 0
+                              },
+                              "boss24": {
+                                        "id": 10001,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 67,
+                                        "isAssisted": 0
+                              },
+                              "boss16": {
+                                        "id": 10031,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 51,
+                                        "isAssisted": 0
+                              },
+                              "boss0": {
+                                        "id": 10033,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 1,
+                                        "mid": -2,
+                                        "isAssisted": 1
+                              },
+                              "boss10": {
+                                        "id": 10021,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 57,
+                                        "isAssisted": 0
+                              },
+                              "boss15": {
+                                        "id": 10021,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 55,
+                                        "isAssisted": 0
+                              },
+                              "boss22": {
+                                        "id": 10014,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 53,
+                                        "isAssisted": 0
+                              },
+                              "boss19": {
+                                        "id": 10021,
+                                        "lv": 18,
+                                        "isAttached": 1,
+                                        "isEquiped": 1,
+                                        "mid": -4,
+                                        "isAssisted": 0
+                              },
+                              "boss2": {
+                                        "id": 10013,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 52,
+                                        "isAssisted": 0
+                              },
+                              "boss14": {
+                                        "id": 10012,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 49,
+                                        "isAssisted": 0
+                              },
+                              "boss17": {
+                                        "id": 10002,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 65,
+                                        "isAssisted": 0
+                              },
+                              "boss9": {
+                                        "id": 10021,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 56,
+                                        "isAssisted": 0
+                              },
+                              "boss18": {
+                                        "id": 10004,
+                                        "lv": 18,
+                                        "isAttached": 1,
+                                        "isEquiped": 1,
+                                        "mid": -5,
+                                        "isAssisted": 0
+                              },
+                              "boss12": {
+                                        "id": 10011,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 50,
+                                        "isAssisted": 0
+                              },
+                              "boss6": {
+                                        "id": 10011,
+                                        "lv": 18,
+                                        "isAttached": 1,
+                                        "isEquiped": 1,
+                                        "mid": -3,
+                                        "isAssisted": 0
+                              },
+                              "boss4": {
+                                        "id": 10022,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 58,
+                                        "isAssisted": 0
+                              },
+                              "boss21": {
+                                        "id": 10024,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 60,
+                                        "isAssisted": 0
+                              },
+                              "boss13": {
+                                        "id": 10003,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 66,
+                                        "isAssisted": 0
+                              },
+                              "boss23": {
+                                        "id": 10002,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 63,
+                                        "isAssisted": 0
+                              },
+                              "boss1": {
+                                        "id": 10003,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 69,
+                                        "isAssisted": 0
+                              },
+                              "boss20": {
+                                        "id": 10021,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 54,
+                                        "isAssisted": 0
+                              },
+                              "boss8": {
+                                        "id": 10003,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 62,
+                                        "isAssisted": 0
+                              },
+                              "boss25": {
+                                        "id": 10004,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 68,
+                                        "isAssisted": 0
+                              },
+                              "boss11": {
+                                        "id": 10023,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 59,
+                                        "isAssisted": 0
+                              },
+                              "boss5": {
+                                        "id": 10001,
+                                        "lv": 18,
+                                        "isAttached": 0,
+                                        "isEquiped": 0,
+                                        "mid": 61,
+                                        "isAssisted": 0
+                              }
+                    },
+                    "book": {},
+                    "fashion": {
+                              "fashion3": {
+                                        "mid": 45,
+                                        "id": 7004,
+                                        "time": "2014-08-11 02:01:13"
+                              },
+                              "fashion0": {
+                                        "mid": -6,
+                                        "id": 7006,
+                                        "time": "2014-08-03 01:20:04"
+                              },
+                              "fashion1": {
+                                        "mid": 44,
+                                        "id": 7002,
+                                        "time": "2014-08-11 02:01:13"
+                              },
+                              "fashion2": {
+                                        "mid": 46,
+                                        "id": 7005,
+                                        "time": "2014-08-11 02:01:13"
+                              }
+                    },
+                    "material": {
+                              "material9": {
+                                        "mid": 30,
+                                        "id": 4504,
+                                        "num": 26
+                              },
+                              "material10": {
+                                        "mid": 9,
+                                        "id": 4202,
+                                        "num": 999
+                              },
+                              "material5": {
+                                        "mid": 7,
+                                        "id": 4202,
+                                        "num": 999
+                              },
+                              "material13": {
+                                        "mid": 16,
+                                        "id": 4312,
+                                        "num": 168
+                              },
+                              "material17": {
+                                        "mid": 3,
+                                        "id": 4201,
+                                        "num": 999
+                              },
+                              "material29": {
+                                        "mid": 23,
+                                        "id": 4333,
+                                        "num": 40
+                              },
+                              "material2": {
+                                        "mid": 17,
+                                        "id": 4313,
+                                        "num": 132
+                              },
+                              "material34": {
+                                        "mid": 8,
+                                        "id": 4202,
+                                        "num": 999
+                              },
+                              "material23": {
+                                        "mid": 4,
+                                        "id": 4201,
+                                        "num": 999
+                              },
+                              "material0": {
+                                        "mid": 0,
+                                        "id": 4107,
+                                        "num": 406
+                              },
+                              "material31": {
+                                        "mid": 22,
+                                        "id": 4332,
+                                        "num": 40
+                              },
+                              "material1": {
+                                        "mid": 31,
+                                        "id": 4511,
+                                        "num": 1
+                              },
+                              "material11": {
+                                        "mid": 13,
+                                        "id": 4302,
+                                        "num": 999
+                              },
+                              "material26": {
+                                        "mid": 10,
+                                        "id": 4202,
+                                        "num": 999
+                              },
+                              "material30": {
+                                        "mid": 34,
+                                        "id": 4514,
+                                        "num": 2
+                              },
+                              "material12": {
+                                        "mid": 5,
+                                        "id": 4201,
+                                        "num": 999
+                              },
+                              "material6": {
+                                        "mid": 33,
+                                        "id": 4513,
+                                        "num": 1
+                              },
+                              "material7": {
+                                        "mid": 26,
+                                        "id": 4431,
+                                        "num": 486
+                              },
+                              "material18": {
+                                        "mid": 12,
+                                        "id": 4301,
+                                        "num": 999
+                              },
+                              "material27": {
+                                        "mid": 35,
+                                        "id": 5004,
+                                        "num": 140
+                              },
+                              "material14": {
+                                        "mid": 14,
+                                        "id": 4303,
+                                        "num": 999
+                              },
+                              "material21": {
+                                        "mid": 11,
+                                        "id": 4202,
+                                        "num": 645
+                              },
+                              "material3": {
+                                        "mid": 28,
+                                        "id": 4502,
+                                        "num": 24
+                              },
+                              "material15": {
+                                        "mid": 27,
+                                        "id": 4501,
+                                        "num": 32
+                              },
+                              "material32": {
+                                        "mid": 25,
+                                        "id": 4421,
+                                        "num": 366
+                              },
+                              "material33": {
+                                        "mid": 2,
+                                        "id": 4201,
+                                        "num": 999
+                              },
+                              "material19": {
+                                        "mid": 6,
+                                        "id": 4201,
+                                        "num": 415
+                              },
+                              "material20": {
+                                        "mid": 1,
+                                        "id": 4108,
+                                        "num": 376
+                              },
+                              "material22": {
+                                        "mid": 24,
+                                        "id": 4411,
+                                        "num": 315
+                              },
+                              "material4": {
+                                        "mid": 18,
+                                        "id": 4321,
+                                        "num": 243
+                              },
+                              "material8": {
+                                        "mid": 15,
+                                        "id": 4311,
+                                        "num": 195
+                              },
+                              "material16": {
+                                        "mid": 20,
+                                        "id": 4323,
+                                        "num": 193
+                              },
+                              "material25": {
+                                        "mid": 21,
+                                        "id": 4331,
+                                        "num": 40
+                              },
+                              "material24": {
+                                        "mid": 32,
+                                        "id": 4512,
+                                        "num": 1
+                              },
+                              "material35": {
+                                        "mid": 19,
+                                        "id": 4322,
+                                        "num": 267
+                              },
+                              "material28": {
+                                        "mid": 29,
+                                        "id": 4503,
+                                        "num": 36
+                              }
+                    },
+                    "special": {
+                              "special0": {
+                                        "mid": 47,
+                                        "id": 9000,
+                                        "num": 71
+                              },
+                              "special1": {
+                                        "mid": 48,
+                                        "id": 9032,
+                                        "num": 1
+                              }
+                    },
+                    "prop": {
+                              "prop1": {
+                                        "mid": 36,
+                                        "id": 6005,
+                                        "num": 1
+                              },
+                              "prop2": {
+                                        "mid": 38,
+                                        "id": 6102,
+                                        "num": 10
+                              },
+                              "prop3": {
+                                        "mid": 39,
+                                        "id": 6103,
+                                        "num": 5
+                              },
+                              "prop6": {
+                                        "mid": 41,
+                                        "id": 6202,
+                                        "num": 29
+                              },
+                              "prop4": {
+                                        "mid": 37,
+                                        "id": 6101,
+                                        "num": 2
+                              },
+                              "prop5": {
+                                        "mid": 43,
+                                        "id": 6205,
+                                        "num": 10
+                              },
+                              "prop0": {
+                                        "mid": 42,
+                                        "id": 6204,
+                                        "num": 31
+                              },
+                              "prop7": {
+                                        "mid": 40,
+                                        "id": 6201,
+                                        "num": 184
+                              }
+                    },
+                    "sum": 108,
+                    "equipment": {
+                              "equip1": {
+                                        "mid": -1,
+                                        "id": 1305,
+                                        "lv": 50,
+                                        "isEquiped": 1,
+                                        "chargeLv": "30|30|30|30"
+                              },
+                              "equip2": {
+                                        "mid": -1,
+                                        "id": 1205,
+                                        "lv": 50,
+                                        "isEquiped": 1,
+                                        "chargeLv": "30|30|30|30"
+                              },
+                              "equip0": {
+                                        "mid": -1,
+                                        "id": 1005,
+                                        "lv": 50,
+                                        "isEquiped": 1,
+                                        "chargeLv": "30|30|30|30"
+                              },
+                              "equip4": {
+                                        "mid": -1,
+                                        "id": 1505,
+                                        "lv": 50,
+                                        "isEquiped": 1,
+                                        "chargeLv": "30|30|30|30"
+                              },
+                              "equip5": {
+                                        "mid": -1,
+                                        "id": 1405,
+                                        "lv": 50,
+                                        "isEquiped": 1,
+                                        "chargeLv": "30|30|30|30"
+                              },
+                              "equip3": {
+                                        "mid": -1,
+                                        "id": 1105,
+                                        "lv": 50,
+                                        "isEquiped": 1,
+                                        "chargeLv": "30|30|30|30"
+                              }
+                    }
+          },
+          "player_killing": {
+                    "pkStatus": 1,
+                    "pkWin": 2000,
+                    "pkCanStart": 1,
+                    "pkExp": 628600,
+                    "pkTime": "",
+                    "preResult": 1,
+                    "pkLose": 290,
+                    "pkCount": 0
+          },
+          "name": "打酱油",
+          "game_setting": {
+                    "openEffect": 2,
+                    "fightVolume": 0.02,
+                    "operateMode": 2,
+                    "preLoading": 1,
+                    "deformTip": 0,
+                    "publicNotice": 1,
+                    "bgVolume": 0.02,
+                    "stageQuality": 2
+          },
+          "partnerSkill": {
+                    "key5": 0,
+                    "key4": 0,
+                    "key6": 0,
+                    "key7": 0,
+                    "key8": 0
+          },
+          "summer_carnival": {
+                    "summerTime": "2014-08-19 07:03:50",
+                    "summerRecharge": "1|1|1|1|1|1|0",
+                    "summerConsume": "1|1|1|1|1|1|0"
+          }
+}

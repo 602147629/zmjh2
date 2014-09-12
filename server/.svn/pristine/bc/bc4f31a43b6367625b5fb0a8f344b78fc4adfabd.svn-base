@@ -1,0 +1,63 @@
+
+module.exports = {
+	//玩家升级到
+	UpgradeLevelTo : function(uid,level){
+		var jsonObj = {
+			"level" : level,
+			"uid" : uid
+		};
+		var buf = require('BufferTools').getJsonPathBufferByDict("MyPlayerReceiveControl","UpgradeLevelTo",jsonObj);
+
+		//封装包头
+		return require('BufferTools').addPackageHead(buf);
+	},
+	//玩家当前经验和等级
+	PlayerExp : function(exp){
+		var jsonObj = {
+			"exp" : exp
+		};
+
+		var buf = require('BufferTools').getJsonPathBufferByDict("MyPlayerReceiveControl","PlayerExp",jsonObj);
+
+		//封装包头
+		return require('BufferTools').addPackageHead(buf);
+	},
+	//玩家当前总属性
+	PlayerProperty : function(property){
+		var jsonObj = {
+			"property" : property.getJsonInfo()
+		};
+
+		var buf = require('BufferTools').getJsonPathBufferByDict("MyPlayerReceiveControl","PlayerProperty",jsonObj);
+
+		//封装包头
+		return require('BufferTools').addPackageHead(buf);
+	},
+	//玩家装备变化(增加、删除、修改),numn为零，则是删除
+	PlayerItemsChange : function(items){
+		var itemsJson = [];
+		items.forEach(function(item){
+			itemsJson.push(item.getJsonInfo())
+		});
+
+		var jsonObj = {
+			"items" : itemsJson
+		};
+
+		var buf = require('BufferTools').getJsonPathBufferByDict("MyPlayerReceiveControl","PlayerEquipmentChange",jsonObj);
+		
+		//封装包头
+		return require('BufferTools').addPackageHead(buf);
+	},
+	//所有背包道具
+	GetBag : function(player){
+		var jsonObj = {
+			"items" : player.bagControllor.getItemsJsonInfo()
+		};
+
+		var buf = require('BufferTools').getJsonPathBufferByDict("MyPlayerReceiveControl","GetBag",jsonObj);
+		
+		//封装包头
+		return require('BufferTools').addPackageHead(buf);
+	}
+}

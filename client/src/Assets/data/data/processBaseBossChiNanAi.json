@@ -1,0 +1,35 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.5
+		},
+
+		"transfer" :{
+			"ai" : "baseBossChiNanOneAi",
+			"NoneCallback" : 1
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseBossChiNanTwoAi",
+			"NoneCallback" : 1
+		}
+	}
+
+}

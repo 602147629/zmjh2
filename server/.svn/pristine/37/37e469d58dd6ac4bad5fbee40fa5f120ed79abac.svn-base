@@ -1,0 +1,162 @@
+var EventEmitter = require("events").EventEmitter;
+var simpleClientClass = require("./SimpleClient.js");
+var cdc = require("../controllor/ConfigDataControllor.js")
+var net = require("net");
+
+function RpcConnector(msgFiles){
+    //消息文件路径
+    this.msgFiles = msgFiles;
+    this.callbacks = [];
+    this.callbackIndex = 0;
+    this.currentCallbackCount = 0;
+    this.type = 'RPC';
+}
+
+require('util').inherits(RpcConnector, simpleClientClass);
+
+
+RpcConnector.prototype.config;//连接对象配置文件
+RpcConnector.prototype.callbacks;//回调集合
+RpcConnector.prototype.callbackIndex;//回调index
+RpcConnector.prototype.currentCallbackCount;//当前处于等待状态的回调数目
+
+RpcConnector.prototype.connect = function(config){
+    this.config = config;
+    var _self = this;
+    require("Log").trace("RpcConnector->connect  config:"+JSON.stringify(config));
+    var socket = net.connect({host:config.ip,port: config.rpc.port},
+        function(err) {
+            _self.emit("connect");
+        });
+
+    simpleClientClass.call(this,socket);
+
+    this.timeoutTime = -1;
+}
+
+RpcConnector.prototype.onReceivePackData = function(buffer){
+    // console.info('exBuffer receive data,length:'+buffer.length);
+    var jsonStr = buffer.toString("utf8",0);
+
+
+    require("Log").trace("RPC_CONNECTOR 收到数据("+this.config.path+this.config.id+"->"+cdc.ServerConfig.path+cdc.ServerConfig.id+") data:"+jsonStr);
+    var jObj = JSON.parse(jsonStr);
+    var rpcData = jObj.rpcData;
+    var data = jObj.data;
+    //rpc连接直接返回的数据，不用携带协议路径
+    var callbackIndex = rpcData.cbIdx;//回调索引
+    if(callbackIndex != undefined && callbackIndex != -1){
+        var obj = this.callbacks[callbackIndex];
+        if(obj){
+            if(obj.time == rpcData.time){
+                obj.cb(null,data);
+                delete this.callbacks[callbackIndex];
+                this.currentCallbackCount--;
+
+                //判断重置索引
+                if(this.currentCallbackCount === 0){
+                    this.callbackIndex = 0;
+                }
+            }
+        }
+    }
+}
+
+//是否已经连接上
+RpcConnector.prototype.isConnected = function(){
+    return this.socket && this.socket.writable;
+}
+
+RpcConnector.prototype.doWhenQuit = function(){
+    if(this.isDestroyed){
+        return;
+    }
+
+    this.config = null;
+    if(this.callbacks){
+        var errCb = function(obj){
+            require("Log").error("RPC连接断开，直接回调错误！!");
+            obj.cb({"msg":"connector close error!"});
+        }
+        require("SuperUtils").forEachInArray(this.callbacks,errCb);
+
+        this.callbacks = null;
+    }
+    this.msgFiles = null;
+
+    simpleClientClass.prototype.doWhenQuit.bind(this)();
+}
+
+//获取一次新的rpc标签,带回调
+RpcConnector.prototype.getNewRpcDataWithCb = function(){
+    var returnObj = {
+        "cbIdx" : this.callbackIndex,
+        "serverId" : cdc.ServerConfig.id,
+        "path" : cdc.ServerConfig.path,
+        "time" : (new Date()).getTime()
+    }
+    this.callbackIndex++;
+    this.currentCallbackCount++;
+
+    return returnObj;
+}
+
+//获取一次新的rpc标签
+RpcConnector.prototype.getNewRpcData = function(){
+    var returnObj = {
+        "serverId" : cdc.ServerConfig.id,
+        "path" : cdc.ServerConfig.path,
+        "time" : (new Date()).getTime()
+    }
+
+    return returnObj;
+}
+
+
+RpcConnector.prototype.send = function(fileName,funcName,data){
+    var rpcData = this.getNewRpcData();
+    var newObj = {
+        "data" : data,
+        "rpcData" : rpcData
+    };
+    var curPath = cdc.ServerConfig.path;
+    var curId = cdc.ServerConfig.id;
+    var targetPath = this.config.path;
+    var targetId = this.config.id;
+    require("Log").trace("RPC发送（"+curPath+curId+"->"+targetPath+targetId+"） :"+fileName+"->"+funcName+"(),data:"+JSON.stringify(newObj));
+    //封装包头
+    var buffer = require('BufferTools').addPackageHead(require('BufferTools').getJsonPathBufferByDict(fileName,funcName,newObj,true));
+
+    simpleClientClass.prototype.send.bind(this)(buffer);
+}
+
+//带回调函数的rpc通讯
+RpcConnector.prototype.sendWithCb = function(fileName,funcName,data,cb){
+    var rpcData = this.getNewRpcDataWithCb();
+    var newObj = {
+        "data" : data,
+        "rpcData" : rpcData
+    };
+    var curPath = cdc.ServerConfig.path;
+    var curId = cdc.ServerConfig.id;
+    var targetPath = this.config.path;
+    var targetId = this.config.id;
+    require("Log").trace("RPC发送（"+curPath+curId+"->"+targetPath+targetId+" 回调索引:"+rpcData.cbIdx+"）:"+fileName+"->"+funcName+"(),data:"+JSON.stringify(newObj));
+    //封装包头
+    var buffer = require('BufferTools').addPackageHead(require('BufferTools').getJsonPathBufferByDict(fileName,funcName,newObj,true));
+
+    var bool = simpleClientClass.prototype.send.bind(this)(buffer);
+    if(bool){
+        if(cb){
+            //有rpc回调，注册
+            this.callbacks[rpcData.cbIdx] = {
+                "cb" : cb,
+                "time" : rpcData.time
+            };
+        }
+    }
+    return bool;
+}
+
+
+module.exports = RpcConnector;

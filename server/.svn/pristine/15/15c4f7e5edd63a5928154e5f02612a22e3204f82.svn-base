@@ -1,0 +1,13 @@
+var SMPublicNotice = {};
+
+
+SMPublicNotice.PublicNoticeReturn = function(obj){
+    obj = {
+        "gameKey" : obj.gameKey,
+        "publicNoticeData":obj.publicNoticeData
+    }
+    return obj;
+}
+
+
+module.exports = SMPublicNotice;

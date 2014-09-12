@@ -1,0 +1,36 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.3
+		},
+
+		"transfer" :{
+			"ai" : "baseEliteBiChiFuRenOneAi",
+			"ReleaseSkill" : 31
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"status" : "onlyHurt",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseEliteBiChiFuRenTwoAi",
+			"NoneCallback" : 1
+		}
+	}
+
+}

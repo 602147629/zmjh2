@@ -1,0 +1,51 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.5
+		},
+
+		"transfer" :{
+			"ai" : "baseEliteAi",
+			"ReleaseSkill" : 31
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"status" : "onlyHurt",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.2
+		},
+
+		"transfer" :{
+			"ai" : "baseEliteYinYangZhenRenOneAi",
+			"NoneCallback" : 1
+		}
+	},
+
+	"thirdFight" :{
+		"type" : "fight",
+		"status" : "onlyHurt",
+		"callback" : "thirdAction",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseEliteYinYangZhenRenTwoAi",
+			"NoneCallback" : 1
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+/**
+ * Created by lijun on 14-6-16.
+ */
+var RMFromGame = {};
+var publicC = require("../../../controllor/PublicNoticeControllor.js");
+
+
+//玩家进入
+RMFromGame.UserLogin = function(buffer){
+    var str = buffer.toString();
+    var jObj = JSON.parse(str);
+    var data = jObj.data;
+    require("Log").trace("玩家"+data.gameKey+"加入广播队列");
+    //放入队列
+    publicC.AddClient(data);
+}
+
+//玩家离开
+RMFromGame.UserLogout = function(buffer){
+    var str = buffer.toString();
+    var jObj = JSON.parse(str);
+    var data = jObj.data;
+    var gameKey = data.gameKey;
+    require("Log").trace("玩家"+gameKey+"离开广播队列");
+
+    //离开队列
+    if(publicC.GetUser(gameKey)){
+        publicC.RemoveClient(gameKey);
+    }
+}
+
+module.exports = RMFromGame;

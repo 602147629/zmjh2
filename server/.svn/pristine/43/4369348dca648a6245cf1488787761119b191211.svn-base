@@ -1,0 +1,19 @@
+var RMFromGame = {};
+var autoC = require("../../../controllor/matchEscortControllor.js");
+
+//玩家离开游戏
+RMFromGame.UserLogout = function(buffer,client){
+    var str = buffer.toString();
+    var jObj = JSON.parse(str);
+    var data = jObj.data;
+    var rpcData = jObj.rpcData;
+    var gameKey = data.gameKey;
+    var gameServerId = data.gameServerId;
+
+    //离开自动匹配
+    if(autoC.GetPipeiUser(gameKey)){
+        autoC.RemoveClient(gameKey);
+    }
+}
+
+module.exports = RMFromGame;

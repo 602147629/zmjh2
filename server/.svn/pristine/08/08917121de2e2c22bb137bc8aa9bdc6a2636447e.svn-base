@@ -1,0 +1,48 @@
+/**
+ * Created by lijun on 14-6-18.
+ */
+
+var lc = require("../controllor/LineControllor.js");
+var smPublic = require("../message/handler/sm/SMPublicNotice.js");
+
+var broadcastControllor = {};
+
+broadcastControllor.IsReadyToKill = false;
+
+var contentArr = [];
+
+broadcastControllor.timeInterval = -1;
+
+
+broadcastControllor.AddBroadcastMessage = function(buffer,cb){
+    var data = buffer;
+
+
+    if(broadcastControllor.IsReadyToKill){
+        //准备关闭了，不让加入
+        require("Log").info("服务器准备关闭！无法加入");
+        if(cb){
+            cb('SERVER_READY_CLOSE');
+        }
+        return;
+    }
+    //放入数组
+    require("Log").info("公告数据放入广播数组");
+    contentArr.push(data);
+    if(broadcastControllor.timeInterval == -1){
+        broadcastControllor.timeInterval = setInterval(broadcastControllor.sendMsg,2000);
+    }
+}
+
+
+broadcastControllor.sendMsg = function(){
+    if(contentArr.length>0){
+        require("Log").info("广播公告");
+        //BroadcastControllor.brocastMsg(contentArr[0]);
+        lc.Brocast(smPublic.PublicNoticeReturn(contentArr[0]));
+        contentArr.shift();
+    }
+}
+
+
+module.exports = broadcastControllor;

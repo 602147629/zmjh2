@@ -1,0 +1,101 @@
+var sm = require('../sm/SMGame.js');
+var smRoom = require('../sm/SMRoom.js');
+var fbControllor = require('../../../controllor/FbControllor.js');
+
+
+module.exports = {
+	//离开副本
+	LeftFb : function(buffer,client){
+        if(!client.user){
+            require('Log').error('RMGame->LeftFb() 错误！没有User数据对象！');
+            return;
+        }
+        if(client.user.fb){
+            client.user.fb.removeClient(client,function(err){
+                if(!err){
+                    require("Log").trace("玩家："+client.user.gameKey+"成功离开副本!");
+                    client.send(sm.LeftFb(true));
+                }else{
+                    require("Log").trace("玩家："+client.user.gameKey+"离开副本失败!");
+                    client.send(sm.LeftFb(false));
+                }
+                client.user.fb = null;
+            });
+        }else{
+            require("Log").trace("RMGame->LeftFb()玩家信息错误");
+        }
+
+        if(client.user.room){
+            if(client.user.room.type === 0){
+                //自动匹配房间，退出副本时自动退出房间
+                client.user.room.removeClient(client,function(err){
+                    if(!err){
+                        //通知玩家
+                        client.send(smRoom.LeftRoomReturn(1));
+                    }
+                    client.user.room = null;
+                });
+            }
+        }
+	},
+	//开始游戏
+	StartGame : function(buffer,client){
+        if(!client.user){
+            require('Log').error('RMGame->StartGame() 错误！没有User数据对象！');
+            return;
+        }
+		//是否在房间中
+        var room = client.user.room;
+        var result = 0;
+        if(room){
+            //是否在副本中
+            if(!room.fb){
+                fbControllor.CreateFb(room,function(err){
+                    if(!err){
+                        result = 1;
+                        require("Log").trace('gameKey:'+client.user.gameKey+" 游戏开始!,当前副本总数:"+fbControllor.GetFbNums());
+                    }else{
+                        require("Log").error("RMGame->StartGame() error! 开始游戏失败!gameKey:"+client.user.gameKey+",err:"+err);
+                    }
+                    room.brocast(sm.StartGame(result));
+                });
+            }else{
+                require("Log").error("RMGame->StartGame() error! 开始游戏失败，本房间已经开始游戏!gameKey:"+client.user.gameKey);
+                room.brocast(sm.StartGame(result));
+            }
+        }else{
+            require("Log").error("RMGame->StartGame() error! 开始游戏失败，你当前不在房间内!gameKey:"+client.user.gameKey);
+            room.brocast(sm.StartGame(result));
+        }
+
+	},
+	//收到玩家按键操作
+	OperationGet : function(buffer,client){
+        if(!client.user){
+            require('Log').error('RMGame->OperationGet() 错误！没有User数据对象！');
+            return;
+        }
+		// console.log("----------------------operation-------------------------");
+		var keyCode = buffer.readInt16LE(0);
+		var oper = buffer.readInt16LE(2);
+
+        if(client.user.fb){
+            client.user.fb.acceptOperation(client.user.index,keyCode,oper);
+        }else{
+            //require('Log').error('RMGame->OperationGet() 错误！当前不在副本内！gameKey:'+client.user.gameKey);
+        }
+	},
+	//某个玩家加载完毕
+	LoadingComplete : function(buffer,client){
+        if(!client.user){
+            require('Log').error('RMGame->LoadingComplete() 错误！没有User数据对象！');
+            return;
+        }
+        if(client.user.fb){
+            client.user.fb.loadingComplete(client);
+            require("Log").trace("RMGame->LoadingComplete()玩家："+client.user.gameKey+" 加载完毕！");
+        }else{
+            require("Log").error('RMGame->LoadingComplete()副本加载完成错误！gameKey:'+ client.user.gameKey +  "你当前不在副本中!");
+        }
+	}
+}

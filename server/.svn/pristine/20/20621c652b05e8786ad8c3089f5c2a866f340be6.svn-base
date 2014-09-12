@@ -1,0 +1,108 @@
+{
+	"protocolToServerFile" : {
+		"0" : "RMGame",
+		"1" : "RMLogin",
+		"2" : "RMLine",
+		"3" : "RMRoom",
+		"4" : "RMPlayer",
+		"5" : "RmMain",
+		"6" : "RMGate"
+	},
+	"protocolToServerFunc" : {
+		"RMLogin" : {
+			"0" : "GetUsersByUid",
+			"1" : "ChoosePlayer",
+			"2" : "NewPlayer"
+		},
+		"RMGame" : {
+			"0" : "LeftFb",
+			"1" : "StartGame",
+			"2" : "OperationGet",
+			"3" : "LoadingComplete"
+		},
+		"RMLine" : {
+			"0" : "ChooseLine",
+			"1" : "GetLines",
+			"2" : "GetAllRooms"
+		},
+		"RMRoom" : {
+			"0" : "JoinRoom",
+			"1" : "LeftRoom",
+			"2" : "CreateRoom",
+			"3" : "ApplyJoinRoom",
+			"4" : "AutoPipei",
+			"5" : "CancelAutoPipei",
+			"6" : "GameOver"
+		},
+		"RMPlayer" : {
+			"0" : "AddExp",
+			"1" : "AddItem",
+			"2" : "RemoveItem",
+			"3" : "GetBag"
+		},
+		"RMGate" : {
+			"0" : "GetUserInfo",
+			"1" : "Login"
+		}
+	},
+	"protocolToClientFile" : {
+		"MyLoginReceiveControl" : "0",
+		"MyGameReceiveControl" : "1",
+		"MyRoomReceiveControl" : "2",
+		"MyLineReceiveControl" : "3",
+		"MyPlayerReceiveControl" : "4",
+		"MyCommonReceiveControl" : "5",
+		"MyGateReceiveControl" : "6"
+	},
+	"protocolToClientFunc" : {
+		"MyLoginReceiveControl" : {
+			"LoginSuccess" : "0",
+			"PlayerBeKicked" : "1",
+			"ChoosePlayerReturn" : "2",
+			"LoginFail" : "3",
+			"ServerStop" : "4"
+		},
+		"MyGameReceiveControl" : {
+			"LeftFb" : "0",
+			"FbTimeout" : "1",
+			"StartGameAfterLoading" : "2",
+			"ByondLoading" : "3"
+		},
+		"MyRoomReceiveControl" : {
+			"ReceiveOperation" : "0",
+			"StartGame" : "1",
+			"RoomChanged" : "2",
+			"CreateRoomReturn" : "3",
+			"JoinRoomReturn" : "4",
+			"LeftRoomReturn" : "5",
+			"AutoPipeiReturn" : "6",
+			"CancelAutoPipeiReturn" : "7",
+			"GameAccount" : "8"
+		},
+		"MyLineReceiveControl" : {
+			"ChooseLineReturn" : "0",
+			"GetLinesReturn" : "1",
+			"PlayerJoin" : "2",
+			"PlayerLeft" : "3",
+			"AllPlayers" : "4",
+			"AllRooms" : "5",
+			"AllPlayersInLogin" : "6",
+			"ChooseLineFull" : "7"
+		},
+		"MyPlayerReceiveControl" : {
+			"UpgradeLevelTo" : "0",
+			"PlayerExp" : "1",
+			"PlayerProperty" : "2",
+			"PlayerEquipmentChange" : "3",
+			"GetBag" : "4"
+		},
+		"MyCommonReceiveControl" : {
+			"GetMsg" : "0",
+			"GetNotice" : "1"
+		},
+		"MyGateReceiveControl" :{
+			"GetServerInfoReturn" : "0",
+			"VersionWrong" : "1"
+		}
+	}
+}

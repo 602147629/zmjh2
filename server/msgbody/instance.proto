@@ -1,0 +1,530 @@
+package inst;
+
+message Pos {
+  required int32 x = 1;
+  required int32 y = 2;
+}
+
+message Character {
+  required int32 entityId = 1; // 实体ID
+  required string name = 2; // 角色名称
+  required int32 kindId = 3; // 种族，仙，魔，人
+  required string kindName = 4; // 种族名称
+  required string type = 5; // 角色类型，玩家，怪物，宠物
+  required int32 x = 6; // x 坐标
+  required int32 y = 7; // y 坐标
+  required int32 hp = 8; // 血量
+  required int32 mp = 9; // 魔法
+  required int32 HPMax = 10; // 最大血量
+  required int32 MPMax = 11; // 最大魔法
+  required int32 Level = 12; // 角色等级
+  required int32 experience = 13; // 角色等级
+  required int32 PhyAtk = 14; // 角色攻击值
+  required int32 PhyDef = 15; // 角色防御值
+  required int32 walkSpeed = 16; // 角色行进速度
+  required int32 attackSpeed = 17; // 攻击速度
+  required int32 areaId = 18; // 所在场景ID
+  required int32 Hit = 19; // 命中率
+  required int32 Dodge = 20; // 闪避率
+  required int32 Critical = 21; // 暴击
+  required int32 Toughness = 22; // 韧性
+  required int32 Lucky = 23; // 幸运
+  required int32 Guardian = 24; // 守护
+  required int32 AddDamage = 25; //额外伤害
+  required int32 SubDamage = 26; // 减伤
+  required bool isMoving = 27; // 减伤
+  required Pos velocity = 28; //朝向(int)
+  required int32 moveType = 29; //速度(int)
+  required int32 MagAtk = 30; //总的技能攻击
+  required int32 MagDef = 31; //总的技能防御
+  required int32 Boss = 32; //是否是BOSS，1是BOSS，0不是
+  required int32 campId = 33; //阵营编码，不同阵营的人，即为敌人
+  required float ReduceDMG = 34; //格挡免伤
+}
+
+message Player {
+  required int32 id = 1; // playerId
+  required int32 skillPoint = 2; // 技能点
+  required int32 entityId = 3; // 实体ID
+  required string name = 4; // 角色名称
+  required int32 kindId = 5; // 种族，仙，魔，人
+  required string kindName = 6; // 种族名称
+  required string type = 7; // 角色类型，玩家，怪物，宠物
+  required int32 x = 8; // x 坐标
+  required int32 y = 9; // y 坐标
+  required int32 hp = 10; // 血量
+  required int32 mp = 11; // 魔法
+  required int32 HPMax = 12; // 最大血量
+  required int32 MPMax = 13; // 最大魔法
+  required int32 Level = 14; // 角色等级
+  required int32 experience = 15; // 角色等级
+  required int32 PhyAtk = 16; // 角色攻击值
+  required int32 PhyDef = 17; // 角色防御值
+  required int32 walkSpeed = 18; // 角色行进速度
+  required int32 attackSpeed = 19; // 攻击速度
+  required int32 areaId = 20; // 所在场景ID
+  required int32 Hit = 21; // 命中率
+  required int32 Dodge = 22; // 闪避率
+  required int32 Critical = 23; // 暴击
+  required int32 Toughness = 24; // 韧性
+  required int32 Lucky = 25; // 幸运
+  required int32 Guardian = 26; // 守护
+  required int32 AddDamage = 27; //额外伤害
+  required int32 SubDamage = 28; // 减伤
+  required bool isMoving = 29; // 减伤
+  required Pos velocity = 30; //朝向(int)
+  required int32 moveType = 31; //速度(int)
+  required int32 MagAtk = 32; //总的技能攻击
+  required int32 MagDef = 33; //总的技能防御
+  required int32 campId = 34; //阵营编码，不同阵营的人，即为敌人
+  required float ReduceDMG = 35; //格挡免伤
+}
+
+message Pet {
+  required int32 entityId = 1; // 实体ID
+  required string name = 2; // 角色名称
+  required int32 kindId = 3; // 种族，仙，魔，人
+  required string kindName = 4; // 种族名称
+  required string type = 5; // 角色类型，玩家，怪物，宠物
+  required int32 x = 6; // x 坐标
+  required int32 y = 7; // y 坐标
+  required int32 hp = 8; // 血量
+  required int32 mp = 9; // 魔法
+  required int32 HPMax = 10; // 最大血量
+  required int32 MPMax = 11; // 最大魔法
+  required int32 Level = 12; // 角色等级
+  required int32 experience = 13; // 角色等级
+  required int32 PhyAtk = 14; // 角色攻击值
+  required int32 PhyDef = 15; // 角色防御值
+  required int32 walkSpeed = 16; // 角色行进速度
+  required int32 attackSpeed = 17; // 攻击速度
+  required int32 areaId = 18; // 所在场景ID
+  required int32 Hit = 19; // 命中率
+  required int32 Dodge = 20; // 闪避率
+  required int32 Critical = 21; // 暴击
+  required int32 Toughness = 22; // 韧性
+  required int32 Lucky = 23; // 幸运
+  required int32 Guardian = 24; // 守护
+  required int32 AddDamage = 25; //额外伤害
+  required int32 SubDamage = 26; // 减伤
+  required bool isMoving = 27; // 
+  required Pos velocity = 28; //朝向(int)
+  required int32 moveType = 29; //速度(int)
+  required int32 MagAtk = 30; //总的技能攻击
+  required int32 MagDef = 31; //总的技能防御
+  required int32 status = 32; //1.NORMAL 正常  2.CRAZY 狂暴   3.WAIT 等待
+  required int32 saveWay = 33; //拯救方式
+  required int32 waitId = 34; //等待的怪物ID
+  required int32 campId = 35; //阵营编码，不同阵营的人，即为敌人
+  optional int32 followTargetId = 36; //跟随者ID的实体编码
+  required float ReduceDMG = 37; //格挡免伤
+}
+
+message petFollowChange //宠物跟随者修改
+{
+  required int32 entityId = 1; // 实体ID
+  required int32 followTargetId = 2; //跟随者ID的实体编码
+  required int32 campId = 3; //宠物阵营编码
+}
+
+message Box {
+  required int32 entityId = 1; // 实体ID
+  required int32 kindId = 2; // 种族，仙，魔，人
+  required int32 x = 3; // x 坐标
+  required int32 y = 4; // y 坐标
+  required int32 hp = 5; // 血量
+  required int32 Level = 6; // 角色等级
+}
+
+message enterSceneResp { //进入副本应答，10056
+  required int32 code = 1;
+  repeated Character mobs = 2;
+  repeated Player players = 3;
+  repeated Pet pets = 4;
+  required Player curPlayer = 5;
+
+  message mapinfo {
+    required string name = 1;
+    required int32 width = 2;
+    required int32 height = 3;
+    required int32 tileW = 4;
+    required int32 tileH = 5;
+  }
+
+  required mapinfo map = 6;
+  required int32 allMobsCount = 7; //地图怪物总数
+  required int32 allViewCount = 8; //关卡总数
+  required int32 runTime = 9; //副本运行时间
+  
+  repeated Box boxs = 10; //物件
+}
+
+message onAddEntities {
+  repeated Character mobs = 1;
+  repeated Player players = 2;
+  repeated Pet pets = 3;
+  repeated Box boxs = 4;
+}
+
+message onRemoveEntities {
+  repeated int32 entityId = 1;
+}
+
+message changeView {
+  required int32 width = 1;
+  required int32 height = 2;
+}
+
+message onMove {
+  required int32 entityId = 1;
+  required int32 speed = 2;
+  repeated Pos path = 3;
+}
+
+message onAttack {
+  required int32 attackerId = 1;
+  required int32 targetId = 2;
+  required int32 result = 3;
+  required int32 skillId = 4;
+  required int32 exp = 5;
+}
+
+message onUpgrade {
+  message entityInfo
+  {
+    required int32 id = 1; // playerId
+	required int32 entityId = 2; // 实体ID
+	//required string type = 3; // 角色类型，玩家，怪物，宠物
+	//required int32 x = 4; // x 坐标
+	//required int32 y = 5; // y 坐标
+	required int32 hp = 3; // 血量
+	required int32 mp = 4; // 魔法
+	required int32 xp = 5; //xp值下发
+	//required int32 maxHp = 8; // 最大血量
+	//required int32 maxMp = 9; // 最大魔法
+	//required int32 level = 10; // 角色等级
+	//required int32 experience = 11; // 角色等级
+	//required int32 walkSpeed = 12; // 角色行进速度
+  }
+  repeated entityInfo entityInfos = 1;
+}
+
+
+
+message onPathCheckout {
+  required int32 entityId = 1;
+  required Pos position = 2;
+}
+
+message EnterCopy //进入副本 10052
+{
+  required int32 userId = 1;   		// 角色ID
+  required int32 instId = 2;   		// 副本实例ID
+}
+
+message BeginMove
+{
+  required Pos coord = 1;
+  required Pos velocity = 2;         //朝向(int)
+  required int32 moveType = 3;        //走动类型(int)
+  optional int32 entityId = 4; // 实体ID
+}
+
+message EndMove
+{
+  required Pos coord = 1;
+  optional int32 entityId = 2; // 实体ID
+  required string parameter = 3; //附加参数
+}
+
+message Moving
+{
+  required Pos coord = 1;
+  optional int32 entityId = 2; // 实体ID
+}
+
+message RegisterCopyServer //注册副本服务器
+{
+  required string ip = 1; // 副本服务器ip
+  required int32 port = 2; // 端口
+  required int32 maxCopyNum = 3; //最大副本个数
+  repeated int32 copyType = 4; //支持的副本类型
+}
+
+message CreateCopy //创建副本 10051
+{
+  required int32 copyType = 1; //副本类型
+  repeated int32 userId = 2; //玩家编码
+  //副本进入者或者组队队长拥有的对于副本中隐藏副本所需的道具
+  required int32 mainUserId = 3; //玩家编码或者队长的编码
+  message ItemInfo //队长拥有的隐藏副本道具
+  {
+    required int32 itemId = 1; //道具编码
+	required int32 num = 2; //道具数量
+  }
+  repeated ItemInfo itemInfo = 4;
+  required int32 battleType = 5; //战斗类型 1副本类型战斗 2玩家PK类型战斗 3迷宫
+  repeated int32 taskList = 6; //任务列表
+  optional int32 mazeLayer = 7; //如果战斗类型是迷宫，则该字段为迷宫的层数，当迷宫结束后，将它返回给场景处理
+  optional bool isHangUp = 8; //是否是挂机，true为挂机
+}
+
+message CreateCopyAns //创建副本应答 10075
+{
+  required int32 instId = 1; //创建的副本实例编码
+  required string ip = 2; // 副本服务器ip
+  required int32 port = 3; // 端口
+  required int32 copyType = 4; //副本编码
+  required int32 battleType = 5; //战斗类型 1副本类型战斗 2玩家PK类型战斗 3迷宫
+  optional int32 mazeLayer = 7; //如果战斗类型是迷宫，则该字段为迷宫的层数
+  optional bool isHangUp = 8; //是否是挂机，true为挂机
+}
+
+message PlayerJump //玩家跳跃
+{
+  optional int32 entityId = 1; // 实体ID
+}
+
+message VelocityChange //玩家跳跃的时候移动速度改变
+{
+  optional int32 entityId = 1; //实体编码
+  required Pos velocity = 2; //移动速度
+  required int32 state = 3;    //状态
+  required string parameter = 4; //附加参数
+}
+
+message onDied //实体死亡
+{
+  required int32 entityId = 1; //实体编码
+}
+
+message BeginSkill //开始技能
+{
+  optional int32 entityId = 1; //实体编码
+  required int32 skillId = 2; //技能编码
+  required int32 type= 3; //技能类型 0 是普通攻击或者正常技能动作，1为发出的“波”
+  required Pos coord = 4; //技能释放点
+  required string parameter = 5; //附加参数，客户端用
+  required int32 instId = 6; //技能实例编码
+  optional int32 targetId = 7; //目标ID
+  required int32 direction = 8; //技能释放时，玩家的方向
+}
+
+message PlaySkill //开始技能
+{
+  optional int32 entityId = 1; //实体编码
+  required int32 skillId = 2; //技能编码
+  required string parameter = 3; //附加参数，客户端用
+  required Pos coord = 4; //技能释放点坐标
+  required int32 instId = 5; //技能实例编码
+  optional int32 targetId = 6; //目标ID
+  required int32 direction = 7; //技能释放时，玩家的方向
+}
+
+message SkillAttack //技能攻击
+{
+  required int32 entityId = 1; //攻击方实体编码
+  optional int32 caromNum = 2; //连击数
+  message AttackInfo //攻击信息
+  {
+    required int32 entityId = 1; //实体编码
+    required int32 skillId = 2; //技能编码
+    optional int32 damageValue = 3; // 伤害值
+    required int32 damageType = 4; //伤害类型，0为正常伤害，1为暴击，2为闪避
+    optional int32 floating = 5; //1 fu kong
+    required Pos coord = 6; //攻击后怪物的坐标
+	optional int32 attEntityId = 7; //攻击方实体编码
+	required int32 direction = 8; //被打方的朝向
+	required string parameter = 9; //附加参数，客户端用
+	required int32 instId = 10; //技能实例编码
+  }
+  repeated AttackInfo attackInfo = 3; //攻击信息
+}
+
+message onMobSkill //怪物技能下方
+{
+  required int32 entityId = 1; //攻击方实体编码
+  required int32 skillId = 2; //技能编码
+  required int32 targetId = 3; //被攻击方实体编码
+  required Pos coord = 4; //攻击时的怪物坐标
+  required Pos targetCoord = 5; //攻击时目标的坐标
+  required int32 instId = 6; //技能实例编码
+  required Pos skillCoord = 7; //技能释放的目标，用于坐标型技能
+}
+
+message Floating //浮空
+{
+  required int32 entityId = 1; //实体编码
+  required string parameter = 2; //附加参数，客户端用
+}
+
+message CopyFinish //副本战斗结束，10076
+{
+  required int32 result = 1; //战斗结果，1为胜利，2为失败
+  required int32 instId = 2; //副本实例ID
+  message Reward //奖励
+  {
+	required int32 money = 1;
+	required int32 exp = 2;
+	repeated int32 itemID = 3;
+	required int32 userId = 4;
+	required int32 maxCaromNum = 5; //最大连击数
+	required int32 combatRatings = 6; //战斗结果评级 0．D级；1.C级；2.B级；3.A级；4.S级；5.SS级；6.SSS级
+	required int32 timeRatings = 7; //时间评级
+	required int32 hpRatings = 8; //生命评级
+	required int32 poundRatings = 9; //连击评级
+	required int32 spirit = 10; //灵魂数量
+  }
+  repeated Reward reward = 3; //奖励
+  message MonsterNum //怪物击打数量
+  {
+    required int32 id = 1; //怪物编码
+	required int32 num = 2; //怪物个数
+  }
+  repeated MonsterNum monsterNum = 4;
+  required int32 copyId = 5;
+  repeated int32 historyInstId = 6; //父副本实例
+  required int32 battleType = 7; //战斗类型 1副本类型战斗 2玩家PK类型战斗 3迷宫
+  optional int32 mazeLayer = 8; //如果战斗类型是迷宫，则该字段为迷宫的层数
+  repeated int32 playerId = 9; //结束战斗时，还在副本的玩家
+  optional bool isHangUp = 10; //是否是挂机，true为挂机
+  
+  message SaveNpcNum //拯救NPC的数量
+  {
+    required int32 id = 1; //NPC编码
+	required int32 num = 2; //拯救数量个数
+  }
+  repeated SaveNpcNum saveNpcNum = 11;
+}
+
+message ApplyForCopy //玩家申请单人副本 10074 客户端到主场景
+{
+  required int32 copyId = 1; //副本编码
+}
+
+message MobCoordChange //怪物坐标上传
+{
+  required int32 entityId = 1; //怪物实体编码
+  required Pos coord = 2; //怪物坐标
+}
+
+message EntityFallDown //怪物倒下
+{
+  message PosInfo //怪物信息
+  {
+    required int32 entityId = 1; //怪物实体编码
+	required Pos coord = 2; //怪物坐标
+  }
+  required PosInfo posInfos = 1; //怪物信息
+}
+
+message EntityGetUp //怪物起身
+{
+  required int32 entityId = 1; //怪物实体编码
+}
+
+message ChangeMission //改变关卡
+{
+  required int32 missionId = 1; //关卡编码
+}
+
+message MobReward //怪物死亡后，掉落物品
+{
+  required int32 money = 1;
+  repeated int32 itemID = 2;
+  required int32 entityId = 3; //怪物实体编码
+}
+
+message EnterHideCopy //玩家发起进入隐藏副本
+{
+  required int32 copyType = 1; //隐藏副本编码
+  required int32 direction = 2; //隐藏副本方向，1为左边，2为右边，3为上边，4为下边
+}
+
+message onEnterHideCopy //副本进程准备好隐藏副本后，下发该消息，下发后删除原来的副本
+{
+  required int32 instId = 1; //创建的副本实例编码
+  required string ip = 2; // 副本服务器ip
+  required int32 port = 3; // 端口
+  required int32 copyType = 4; //副本类型
+}
+
+message SaveNpc //拯救NPC
+{
+  required int32 entityId = 1; //实体编码
+}
+
+message playerPK //玩家发起PK请求
+{
+  required int32 uid = 1; //跟谁PK
+}
+
+message onPlayerPK //服务器下发PK消息让客户端确认是否进行该PK
+{
+  required int32 uid = 1; //谁想和你进行PK ID
+  required string playerName = 2; //谁想和你进行PK 名字
+}
+
+message agreePKrequest //PK回应
+{
+  required int32 reply = 1; //回应结果，1为同意，其他为拒绝
+}
+
+message queryPKinfo //查询玩家PK信息
+{
+  required int32 uid = 1; //查询的玩家
+}
+
+message PKfinish //玩家PK结束
+{
+  message PlayerResult
+  {
+    required int32 uid = 1; //玩家编码
+	required int32 result = 2; //战斗结果，1为胜利，2为失败
+  }
+  repeated PlayerResult playerResult = 1; //PK结果
+}
+
+message modifyPlayerStatus //修改玩家状态
+{
+  required int32 uid = 1; //玩家编码
+  required int32 status = 2; //玩家状态 1 --在时间界面中 2 --在场景中 3 --在副本中 4 --退出状态 5 --玩家在PK状态中
+}
+
+message petFight //宠物出战
+{
+  required int32 petPos = 1; //宠物位置
+}
+
+message onBuffAdd //加属性的buff下发
+{
+  required int32 BuffID = 1; //对应buff表的ID
+  required string instType = 2; //buff的主键，如果客户端发现有相同的instType下发了，则替换掉
+  required int32 entityId = 3; //被加buff对象
+  required string attrName = 4; //属性名称
+  required float attrValue = 5; //buff加完之后的属性值
+}
+
+message onBuffDel //加属性的buff删除下发
+{
+  required string instType = 1; //buff的主键，如果客户端发现有相同的instType下发了，则替换掉
+  required int32 entityId = 2; //被加buff对象
+  required string attrName = 3; //属性名称
+  required float attrValue = 4; //buff加完之后的属性值
+}
+
+message openBox
+{
+  required int32 entityId = 1; //箱子的实体编码
+}
+
+message playerDialog //播放会话
+{ 
+  required int32 dialogId = 1; //会话编码
+}
+
+message dialogTurnPage //会话翻页
+{
+  required int32 pageNum = 1; //页码
+}
+

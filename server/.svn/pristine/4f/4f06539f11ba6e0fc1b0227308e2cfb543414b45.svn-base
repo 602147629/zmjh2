@@ -1,0 +1,62 @@
+
+module.exports = {
+    RoomChanged : function(roomInfo){
+        var jObj = {
+            "room" : roomInfo
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","RoomChanged",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    //创建房间返回和加入房间返回共用（type（0：创建，1：加入））
+    CreateRoomReturn : function(err,key,roomId,config,type){
+        var jObj;
+        if(err == null){
+            jObj = {
+                "err" : err,
+                "key" : key,
+                "roomId" : roomId,
+                "ip" : config.ip,
+                "port" : config.client.port,
+                "type" : type
+            }
+        }else{
+            jObj = {
+                "err" : err,
+                "type" : type
+            }
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","CreateRoomReturn",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    JoinRoomFail : function(buffer,client){
+        var jObj = {
+            "errId" : 0
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","JoinRoomFail",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    AutoPipeiReturn : function(result){
+        var jObj = {
+            "result" : result
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","AutoPipeiReturn",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    CancelAutoPipeiReturn : function(result){
+        var jObj = {
+            "result" : result
+        }
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyRoomReceiveControl","CancelAutoPipeiReturn",jObj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    }
+}

@@ -1,0 +1,90 @@
+{
+	"start" :{
+		"type" : "word",
+		"callback" : "firstFight"
+	},
+
+	"firstFight" :{
+		"type" : "fight",
+		"status" : "invincible",
+		"callback" : "secondFight",
+
+		"judge" :{
+			"BaseThingEntity" : "ShackleThing1_ShackleThing2|JianMoWangHunSkill|140|1|18_60"
+		},
+
+		"0" : {
+			"RelaseSkillByTime" : "33|180"
+		},
+
+		"transfer" :{
+			"ai" : "baseBossAi",
+			"NoneCallback" : 0
+		}
+	},
+
+	"secondFight" :{
+		"type" : "fight",
+		"status" : "nothing",
+		"callback" : "thirdFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.6
+		},
+
+		"transfer" :{
+			"ai" : "baseBossMingHuoFenShenThreeAi",
+			"NoneCallback" : 1
+		}
+	},
+
+	"thirdFight" :{
+		"type" : "fight",
+		"status" : "onlyHurt",
+		"callback" : "fourFight",
+
+		"judge" :{
+			"HpConditionLower" : 0.3
+		},
+
+		"transfer" :{
+			"ai" : "baseBossMingHuoFenShenFourAi",
+			"NoneCallback" : 1
+		}
+	},
+
+	"fourFight" :{
+		"type" : "fight",
+		"status" : "invincible",
+		"callback" : "fiveFight",
+
+		"judge" :{
+			"BaseThingEntity" : "ShackleThing1_ShackleThing2|JianMoWangHunSkill|140|1|18_60"
+		},
+
+		"0" : {
+			"RelaseSkillByTime" : "31|180"
+		},
+
+		"transfer" :{
+			"ai" : "baseBossAi",
+			"NoneCallback" : 0
+		}
+	},
+
+	"fiveFight" :{
+		"type" : "fight",
+		"status" : "onlyHurt",
+		"callback" : "firstFight",
+
+		"judge" :{
+			"NoneCallback" : 0
+		},
+
+		"transfer" :{
+			"ai" : "baseBossMingHuoFenShenFiveAi",
+			"NoneCallback" : 1
+		}
+	}
+
+}

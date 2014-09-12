@@ -1,0 +1,24 @@
+var SMAutoPipeiEscort = {};
+
+
+SMAutoPipeiEscort.AutoPipeiEscortReturn = function(result,objSelf,objOther){
+    var obj;
+    if(result == 1){
+        //成功
+        obj = {
+            "result" : result,
+            "gameKey" : objSelf.gameKey,
+            "escortType":objSelf.escortType,
+            "otherPlayerData":objOther.playerData
+        }
+    }else{
+        //失败
+        obj = {
+            "result" : result
+        }
+    }
+    return obj;
+}
+
+
+module.exports = SMAutoPipeiEscort;

@@ -1,0 +1,9 @@
+{
+    "env" : "develop",
+    "log" : {
+        "logLevel" : "info",
+        "maxSize" : 100000000,
+        "backups" : 20
+    },
+    "Notes" : "这里是注释！env:(develop|deploy),logLevel:(trace|error)"
+}

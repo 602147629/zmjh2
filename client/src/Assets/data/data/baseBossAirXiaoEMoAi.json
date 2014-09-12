@@ -1,0 +1,81 @@
+{
+	"BevSelectorNode" :
+	{
+		"id" : 0,
+		"name" : "root",
+		"params" : "false",
+		"callback" : "",
+		"BevSequenceNode_0" : {
+			"id" : 0,
+			"name" : "find",
+			"params" : "false",
+			"callback" : "",
+			"BevIsOnAttackNode" : {
+				"id" : 0,
+				"name" : "isStartAttack",
+				"params" : "false",
+				"callback" : ""
+			},
+			"BevDistanceNode" : {
+				"id" : 1,
+				"name" : "distance",
+				"params" : "false|1000",
+				"callback" : ""
+			},
+			"BevMonsterLeftMove" : {
+				"id" : 2,
+				"name" : "leftMove",
+				"params" : "false",
+				"callback" : ""
+			}
+		},
+		"BevSequenceNode_1" : {
+			"id" : 1,
+			"name" : "patrol",
+			"params" : "false",
+			"callback" : "",
+			"BevAttackAirNode" : {
+				"id" : 0,
+				"name" : "air",
+				"params" : "false|105",
+				"callback" : ""
+			},
+			"BevIsOnAttackNode" : {
+				"id" : 1,
+				"name" : "startAttack",
+				"params" : "false",
+				"callback" : ""
+			},
+			"BevBoardRangeNode" : {
+				"id" : 2,
+				"name" : "board",
+				"params" : "false",
+				"callback" : ""
+			},
+			"BevAttackRangeNode" : {
+				"id" : 3,
+				"name" : "range",
+				"params" : "false|100",
+				"callback" : ""
+			},
+			"BevAttackMoveNode" : {
+				"id" : 4,
+				"name" : "move",
+				"params" : "false|100",
+				"callback" : ""
+			}
+		},
+		"BevSequenceNode_2" : {
+			"id" : 2,
+			"name" : "attack",
+			"params" : "false",
+			"callback" : "",
+			"BevContinueAttackNode" : {
+				"id" : 0,
+				"name" : "fight",
+				"params" : "false|20|31_31_31",
+				"callback" : ""
+			}
+		}
+	}
+}

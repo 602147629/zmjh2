@@ -1,0 +1,30 @@
+var sic = require("../../../controllor/ServerInfoControllor.js");
+
+
+module.exports = {
+    //获取
+    SendServersInfo : function(key,serverId){
+        var info = sic.GetServerInfo();
+        var obj = {
+            "key" : key,
+            "serverId" : serverId,
+            "servers" : info
+        }
+
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyGateReceiveControl","GetServerInfoReturn",obj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    },
+    //不是最新版本
+    VersionWrong : function(){
+        var obj = {
+
+        }
+
+        var pathBuffer = require('BufferTools').getJsonPathBufferByDict("MyGateReceiveControl","VersionWrong",obj);
+
+        //封装包头
+        return require('BufferTools').addPackageHead(pathBuffer);
+    }
+}

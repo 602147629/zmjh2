@@ -1,0 +1,267 @@
+//粘包分包解析库
+var ExBuffer = require('../net/ExBuffer');
+var EventEmitter = require('events').EventEmitter;
+
+
+
+//用于和客户端映射的类，每个客户端（socket）对应一个这样的对象
+function SimpleClient(socket) {
+    EventEmitter.call(this);
+    var _self = this;
+
+    this.timeoutTime = 30000;//30秒心跳超时
+
+	this.exBuffer = new ExBuffer().uint32Head().littleEndian();
+    this.exBuffer.on('data',function(buffer){
+        _self.onReceivePackData(buffer);
+    });
+
+    //单个包数据量太大
+    this.exBuffer.on('toolarge',function(dlen){
+        _self.onPackageTooLarge(dlen);
+    });
+
+    this.socket = socket;
+    this.socket.setNoDelay(true);
+
+    var _exBuffer = this.exBuffer;
+    this.socket.on('data',function(d){
+//        console.log('socket-receive-length:'+d.length);
+        //交给解包器
+        if(socket.readable){
+            _exBuffer.put(d);
+        }
+    });
+
+
+    this.socket.on('close',function(){
+       _self.doWhenQuit();
+    });
+
+    this.socket.on('error', function (e) {
+        if(e.code == 'ECONNRESET'){
+            return;
+        }
+        require("Log").error('SimpleClient->socket-error:'+e.stack);
+//        _self.doWhenQuit();
+      // if (e.code == 'EADDRINUSE') {
+      //   console.log('Address in use, retrying...');
+      //   setTimeout(function () {
+      //     socket.close();
+      //     socket.listen(PORT, HOST);
+      //   }, 1000);
+      // }
+    });
+    this.isDestroyed = false;
+} 
+
+require('util').inherits(SimpleClient,EventEmitter);
+
+SimpleClient.prototype.type;//连接类型（'RPC','CLIENT'）
+SimpleClient.prototype.isDestroyed;//是否已经被销毁了
+SimpleClient.prototype.socket;//socket对象
+SimpleClient.prototype.msgFiles;//文件加载器
+SimpleClient.prototype.timeoutTime;//心跳超时时间（毫秒,-1代表不设定超时）
+SimpleClient.prototype.timeoutIndex;//计时器索引
+
+
+//当收到过大的数据的时候
+SimpleClient.prototype.onPackageTooLarge = function(dlen){
+
+}
+
+SimpleClient.prototype.onReceivePackData = function(buffer){
+    //判断心跳
+    var self = this;
+    if(this.timeoutTime > 0){
+        clearTimeout(this.timeoutIndex);
+        this.timeoutIndex = setTimeout(function(){
+            if(self.user){
+                if(self.user.loginKey){
+                    require("Log").info("玩家心跳超时，断开连接.loginKey:"+self.user.loginKey);
+                }else if(self.user.gameKey){
+                    require("Log").info("玩家心跳超时，断开连接.gameKey:"+self.user.gameKey);
+                }
+            }
+            self.destroy();
+        },this.timeoutTime);
+    }
+
+    var encodeType = buffer.readInt8(0);
+    var isCrypt = buffer.readInt8(1);
+//    require('Log').trace('----------------encodeType:'+encodeType);
+//    require('Log').trace('----------------isCrypt:'+isCrypt);
+
+    //解密
+    this.decrypt(encodeType,buffer);
+    //验证合法性
+    if(isCrypt == 1){
+        var isPass = this.checkCrypt(buffer);
+        if(!isPass){
+            //数据包合法性验证不通过
+            require("Log").error("检测到数据包合法性验证不通过！");
+            if(this.user){
+                if(this.user.loginKey){
+                    require("Log").error("数据包合法性验证不通过！断开连接.loginKey:"+this.user.loginKey);
+                }else if(this.user.gameKey){
+                    require("Log").error("数据包合法性验证不通过！断开连接.gameKey:"+this.user.gameKey);
+                }
+            }
+            this.destroy();
+            return;
+        }
+    }
+
+    var offset = 2;
+
+    //如果需要验证数据，则会多一个四个字节的验证码
+    if(isCrypt == 1){
+        offset += 4;
+    }
+
+    //解析协议路径
+    var pathLen = buffer.readInt16LE(offset);
+    offset += 2;
+    if(pathLen > 0){
+        var path = buffer.toString('utf8',offset,offset+pathLen);
+//        require('Log').trace('————————————————————path：'+path);
+        var protocolArr = this.analysePath(path);
+        if(protocolArr.length == 2){
+            var fileName = protocolArr[0];
+            var funcName = protocolArr[1];
+
+            if(this.msgFiles[fileName]){
+                if(this.msgFiles[fileName][funcName]){
+                    var buf = buffer.slice(offset+pathLen);
+                    //打印日志（可关闭）
+                    this.logReceiveData(fileName,funcName,buf);
+                    this.msgFiles[fileName][funcName](buf,this);
+                }else{
+                    require("Log").error("函数没找到:"+path);
+                    this.destroy();
+                }
+            }else{
+                require("Log").error("文件名没找到:"+path);
+                this.destroy();
+            }
+        }
+    }else if(pathLen == 0){
+        //心跳包，暂时不处理
+
+    }else{
+        require("Log").error("协议路径长度为负数!");
+        this.destroy();
+    }
+}
+
+//将收到的包打印出来
+SimpleClient.prototype.logReceiveData = function(fileName,funcName,buf){
+
+}
+
+//验证数据包内容
+SimpleClient.prototype.checkCrypt = function(buffer){
+    if(this.type == 'RPC'){
+        return true;
+    }else{
+        var crypt = buffer.readInt32LE(2);//客户端发来的加密值
+        var cryptKey = buffer[6];//密钥的初始值(与客户端约定好,是包体数据中的第一个字节)
+
+        var len = buffer.length;
+
+        for(var j=6;j<len;j++){
+            cryptKey = cryptKey^buffer[j];
+        }
+
+        return cryptKey === crypt;
+    }
+}
+
+
+
+
+SimpleClient.prototype.doWhenQuit = function(){
+    if(this.isDestroyed){
+        return;
+    }
+    this.isDestroyed = true;
+
+    clearTimeout(this.timeoutIndex);
+
+    this.destroy();
+
+    if(this.msgFiles){
+        this.msgFiles = null;
+    }
+
+    if(this.exBuffer){
+        this.exBuffer.removeAllListeners();
+        this.exBuffer = null;
+    }
+    if(this.socket){
+        this.socket.removeAllListeners();
+        this.socket = null;
+    }
+    this.emit("destroy");
+    this.removeAllListeners();
+}
+
+//根据protocol.json解析协议字典
+SimpleClient.prototype.analysePath = function(path){
+    var pathArr = path.split(".");
+    if(pathArr.length == 2){
+        return pathArr;
+    }else{
+        require("Log").error("--onReceivePackData--path--error--");
+        //断开连接
+        this.destroy();
+    }
+    return [];
+}
+
+//加密
+SimpleClient.prototype.encrypt = function(encodeType,buffer){
+
+}
+//解密
+SimpleClient.prototype.decrypt = function(encodeType,buffer){
+
+}
+
+//发送消息
+SimpleClient.prototype.send = function(buffer){
+    if(this.isDestroyed){
+        return false;
+    }
+    if(!buffer){
+        return false;
+    }
+    //复制一个buffer出来，否则，因为加密操作会影响到buffer对象，brocast的时候可能会影响到别人的buffer
+    var newBuf = new Buffer(buffer.length);
+    buffer.copy(newBuf);
+
+    //加密
+    this.encrypt(newBuf);
+    if(this.socket && this.socket.writable){
+        this.socket.write(newBuf);
+    }
+    return true;
+}
+
+
+SimpleClient.prototype.destroy = function(){
+    if(this.user){
+        if(this.user.loginKey){
+            require("Log").trace("销毁连接-loginKey:"+this.user.loginKey);
+        }else if(this.user.gameKey){
+            require("Log").trace("销毁连接-gameKey:"+this.user.gameKey);
+        }
+    }
+
+    if(this.socket){
+        this.socket.destroy();
+    }
+}
+
+
+module.exports = SimpleClient;

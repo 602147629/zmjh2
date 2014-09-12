@@ -1,0 +1,94 @@
+var lineControllor = require("../controllor/LineControllor.js");
+var configDataControllor = require("../../../controllor/ConfigDataControllor.js");
+
+var smGate = require("../message/remote/sm/SMToGate.js");
+var smCommon = require("../message/handler/sm/SMCommon.js");
+var rpcConnectorControllor = require("../../../controllor/RpcConnectorControllor.js");
+
+//初始化line配置
+var initLine = function(config){
+    var lineConfig = configDataControllor.GetConfigByName("Line.json");
+    //找到本服的配置
+    require("Log").trace("新增一条线 lineConfig:"+JSON.stringify(lineConfig));
+    var len = lineConfig.length;
+    for(var i=0;i<len;i++){
+        var line = lineConfig[i];
+        if(line.serverid == config.id){
+            require("Log").trace("新增一条线 Line id:"+line.serverid);
+            lineControllor.InitWithConfig(line.line);
+            break;
+        }
+    }
+}
+
+//更新line配置
+var updateLine = function(config){
+    var lineConfig = configDataControllor.GetConfigByName("Line.json");
+    //找到本服的配置
+    var len = lineConfig.length;
+    for(var i=0;i<len;i++){
+        var line = lineConfig[i];
+        if(line.serverid == config.id){
+            lineControllor.UpdateConfig(line.line);
+            break;
+        }
+    }
+}
+
+//连接网关服务器，并且发送本机服务器信息
+var startToGate = function(){
+    //向网关服务器发送本服信息
+    clearInterval(this.si);
+    rpcConnectorControllor.BrocastByPath("Gate","RMGate","GetServerInfo",smGate.SendServerInfo(lineControllor.GetTotalNum()));
+    this.si = setInterval(function(){
+        rpcConnectorControllor.BrocastByPath("Gate","RMGate","GetServerInfo",smGate.SendServerInfo(lineControllor.GetTotalNum()));
+    },10000);
+}
+module.exports = {
+    StartWithConfig : function(config,cb){
+        require("Log").trace("Game ServerControllor StartWithConfig config:"+JSON.stringify(config));
+
+//        var series = [];
+//        series.push(function(cb){
+//            var dbName = configDataControllor.GetConfigByName("ServersUnion.json").dbname;
+//            db.InitPool(dbName,cb);
+//        });
+//        series.push(function(cb){
+//            //初始化线
+//            initLine(config);
+//            cb();
+//        })
+//        require('async').series(series,cb);
+
+        //初始化线
+        initLine(config);
+        //向Gate发送本服信息
+        startToGate();
+        cb();
+    },
+    //解析telnet命令
+    TelnetCommand : function(msg,data){
+        require("Log").trace("Game TelnetCommand msg:"+msg+",data:"+JSON.stringify(data));
+        switch(msg){
+            case "UpdateConfig":
+                updateLine(configDataControllor.ServerConfig);
+                break;
+            case "StartToGate":
+                //开始向网关服务器注册
+                //startToGate();
+                break;
+            case "KillGame":
+                //关闭游戏
+                clearInterval(this.si);//停止向gate广播消息
+                break;
+            //广播公告
+            case "BrocastMsg":
+                lineControllor.Brocast(smCommon.SendNotice(data));
+                break;
+            //准备杀进程
+            case "ReadyToKill":
+                //准备关闭游戏
+                break
+        }
+    }
+}

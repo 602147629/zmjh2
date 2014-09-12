@@ -1,0 +1,752 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cons",
+				"console.info(message);"
+			],
+			[
+				"con",
+				"console.log(message);"
+			],
+			[
+				"socket",
+				"net.Socket(options);"
+			],
+			[
+				"int",
+				"int"
+			],
+			[
+				"道具",
+				"道具总价值"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 560,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "message.js",
+			"settings":
+			{
+				"buffer_size": 380,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gameSocket.js",
+			"settings":
+			{
+				"buffer_size": 2813,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllor/SocketSendHandler.js",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllor/UserPositionControllor.js",
+			"settings":
+			{
+				"buffer_size": 1251,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "net/message/rm/RMGame.js",
+			"settings":
+			{
+				"buffer_size": 1712,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "net/message/sm/SMGame.js",
+			"settings":
+			{
+				"buffer_size": 2625,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "model/User.js",
+			"settings":
+			{
+				"buffer_size": 230,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllor/RoomControllor.js",
+			"settings":
+			{
+				"buffer_size": 2570,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "model/Room.js",
+			"settings":
+			{
+				"buffer_size": 2400,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllor/FbControllor.js",
+			"settings":
+			{
+				"buffer_size": 1297,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modules/Fb.js",
+			"settings":
+			{
+				"buffer_size": 1616,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "model/Key.js",
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Nodejs/Nodejs.sublime-build",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 146.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/WORK/NODE/test/net/message/sm/SMLogin.js",
+		"/E/WORK/NODE/test/net/message/rm/RMLogin.js",
+		"/E/WORK/NODE/test/model/Seat.js",
+		"/E/WORK/NODE/test/tool.js",
+		"/E/WORK/NODE/test/net/ExBuffer.js",
+		"/E/WORK/NODE/test/modules/RoomModule.js",
+		"/E/WORK/NODE/test/net/message/sm/SMessage.js",
+		"/E/WORK/NODE/test/net/message/rm/RMessage.js",
+		"/E/WORK/NODE/test/net/message/SM/test/SM10000.js",
+		"/E/WORK/NODE/test/net/message/SMessage.js",
+		"/E/WORK/NODE/test/tools/loader.js",
+		"/E/WORK/NODE/test/net/message/RMessage.js",
+		"/E/WORK/NODE/test/controllor/SocketReceiveHandler.js",
+		"/E/WORK/NODE/test/net/message/rm/RM10000.js",
+		"/D/Users/xmyi-0362/Desktop/loader.js",
+		"/E/WORK/NODE/test/instance/BasePlayer.js",
+		"/E/WORK/NODE/test/instance/BaseObject.js",
+		"/E/WORK/NODE/test/const/common.js",
+		"/D/Users/xmyi-0362/Desktop/1/bin/M 8 1320225733.dat",
+		"/E/WORK/NODE/test/app.js",
+		"/D/Users/xmyi-0362/Desktop/《造梦西游online》屏蔽词.csv",
+		"/D/WORK/zmnew/trunk/client/项目工程/src/assets/map/huaguoshan_zhucheng.tmx",
+		"/E/WORK/NODE/test/test.sublime-project",
+		"/C/Users/xmyi-0362/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/xmyi-0362/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/xmyi-0362/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/xmyi-0362/AppData/Roaming/Sublime Text 2/Packages/Nodejs/Nodejs.sublime-settings",
+		"/C/Users/xmyi-0362/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/xmyi-0362/AppData/Roaming/Sublime Text 2/Packages/User/Nodejs.sublime-settings",
+		"/E/test/zmxy3/zmxy3.go",
+		"/E/test/zmxy3/confirmCheat.go",
+		"/E/test/zmld/config.go",
+		"/E/test/zmld/zmld.go",
+		"/d/Users/xmyi-0362/Desktop/异常存档一（历史）.txt",
+		"/d/Users/xmyi-0362/Desktop/异常存档一.txt",
+		"/E/test/zmld/testXML.go",
+		"/E/test/zmld/checkLogic.go",
+		"/E/test/zmxy3/maybeCheat.go",
+		"/E/test/zmxy3Main.go",
+		"/E/test/zmxy3/nowSave.txt",
+		"/E/test/zmxy3/xmlStruct.go",
+		"/E/test/zmld/zmld_test.go"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"GetRooms",
+			"AllRooms",
+			"GetRooms",
+			"ReceiveOperation",
+			"		\n",
+			"CreateRoom",
+			"GetRoomById",
+			" = ",
+			"removePlayer",
+			"foreach",
+			"LeftRoom",
+			"onReceivePackData",
+			"toString",
+			"tostring",
+			"utf",
+			"socket-receive-length",
+			"onReceivePackData",
+			"getPlayerByUid",
+			"GetPlayerByUid",
+			"upc",
+			"ucg",
+			"smsg",
+			"socketConnects",
+			"srh",
+			"msgFiles",
+			"smsg",
+			"msgFiles",
+			"rm",
+			"compile",
+			"	\n",
+			"    \n",
+			"CheckShopItemsWhithoutPay",
+			"lhys",
+			"getExceptionMessage",
+			"getExceptionMessage\ngetExceptionMessage",
+			"getExceptionMessage\n",
+			"14",
+			"<item id=\"14\" num=\"596\"/>",
+			"14",
+			"Prop",
+			"MAIN_ROLE_NAME",
+			"getMainRole",
+			"mainRole",
+			"99",
+			"GetEquipNodeValue",
+			"GEtPlayerNodeValue",
+			"CheckNowDataEquipAndPet",
+			"bagSaveString",
+			"CheckShopItemsWhithoutPay",
+			"	\n",
+			"bagSaveString",
+			"MagicBalloon",
+			"lhys",
+			"jyd3",
+			"sef",
+			"jyys",
+			"djy",
+			"print",
+			"zbsz",
+			"sz",
+			"wpxyf",
+			"CheckShopItemsWhithoutPay",
+			"parseStr",
+			"130",
+			"tmp",
+			"configData",
+			"ConfigData",
+			"tmp",
+			"Init",
+			"NewZmld",
+			"ZmldLogic",
+			"zml",
+			"checkLeadLV",
+			"getMainRole",
+			"checkMainRoleLV",
+			"checkLevel",
+			"fmt",
+			"CheckShopItemsWhithoutPay"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "message.js",
+					"settings":
+					{
+						"buffer_size": 380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gameSocket.js",
+					"settings":
+					{
+						"buffer_size": 2813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controllor/SocketSendHandler.js",
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "controllor/UserPositionControllor.js",
+					"settings":
+					{
+						"buffer_size": 1251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								529
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "net/message/rm/RMGame.js",
+					"settings":
+					{
+						"buffer_size": 1712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								492,
+								492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "net/message/sm/SMGame.js",
+					"settings":
+					{
+						"buffer_size": 2625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "model/User.js",
+					"settings":
+					{
+						"buffer_size": 230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								230,
+								230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "controllor/RoomControllor.js",
+					"settings":
+					{
+						"buffer_size": 2570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "model/Room.js",
+					"settings":
+					{
+						"buffer_size": 2400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2301,
+								2301
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1368.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "controllor/FbControllor.js",
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "modules/Fb.js",
+					"settings":
+					{
+						"buffer_size": 1616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "model/Key.js",
+					"settings":
+					{
+						"buffer_size": 107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								61
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.913793103448,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 219.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
